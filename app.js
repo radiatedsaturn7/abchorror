@@ -67,6 +67,7 @@ const state = {
 
 const config = { ...defaultConfig };
 const deskScenes = ["desk1.png", "desk2.png", "desk3.png"];
+const speechSynth = window.speechSynthesis || null;
 
 const selectors = {
   grade: 3,
@@ -236,6 +237,26 @@ function renderQuestion(question) {
     button.addEventListener("click", () => handleAnswer(index));
     choicesEl.appendChild(button);
   });
+  speakQuestion(question);
+}
+
+function speakQuestion(question) {
+  if (!speechSynth || typeof SpeechSynthesisUtterance === "undefined") {
+    return;
+  }
+  const parts = [];
+  if (question.passage) {
+    parts.push(`Passage: ${question.passage}`);
+  }
+  parts.push(question.prompt);
+  const answers = question.choices
+    .map((choice, index) => `${LETTERS[index]}. ${choice}`)
+    .join(" ");
+  parts.push(`Answer choices: ${answers}`);
+  speechSynth.cancel();
+  const utterance = new SpeechSynthesisUtterance(parts.join(" "));
+  utterance.rate = 0.95;
+  speechSynth.speak(utterance);
 }
 
 function showFeedback(text, type, hint) {
