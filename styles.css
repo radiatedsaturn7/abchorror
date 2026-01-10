@@ -265,10 +265,17 @@ input[type="text"] {
   margin-top: 16px;
 }
 
+.choice-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
 .choice-btn {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex: 1;
   padding: 12px;
   background: rgba(255, 255, 255, 0.06);
   border-radius: 12px;
@@ -276,6 +283,24 @@ input[type="text"] {
   color: #fff;
   cursor: pointer;
   transition: border 0.2s ease, transform 0.2s ease;
+}
+
+.choice-sound {
+  width: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  transition: border 0.2s ease, transform 0.2s ease;
+}
+
+.choice-sound:hover,
+.choice-sound:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-1px);
 }
 
 .choice-btn:hover,

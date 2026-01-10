@@ -39,6 +39,13 @@ const MODE_LABELS = {
   match: "Match-Up",
 };
 const MAX_NIGHTS = 5;
+const GRADE_FILES = {
+  1: "grade1.json",
+  2: "grade2.json",
+  3: "grade3.json",
+  4: "grade4.json",
+  5: "grade5.json",
+};
 
 const defaultConfig = {
   dreadThreshold: 100,
@@ -51,6 +58,7 @@ const defaultConfig = {
 
 const state = {
   questions: [],
+  questionsByGrade: {},
   grade: 3,
   mode: "night",
   playerName: "Player",
@@ -83,28 +91,118 @@ const selectors = {
   grade: 3,
 };
 
-const loreSegments = [
-  {
-    title: "Overnight Orientation",
-    text: "Hello hello! I heard you started the job making tests for kids overnight. The halls are quiet, the projector is buzzing, and somewhere in this school an old teacher keeps count. He used to be the kind that never smiled, the kind who wrote the hard tests. Then the failures piled up. He couldn't stand it. He called it mercy. He called it grading. And he never left the building.",
-  },
-  {
-    title: "The Red Pen",
-    text: "Night two. The ink stains on the desk weren't always red. They used to be chalk, and the man used to be kind. But the grades came back wrong, and he kept correcting until the children were gone. Now the mouse he became hates wrong answers more than silence. If you miss too many, he takes your voice so you can never plead again.",
-  },
-  {
-    title: "Hall Monitor",
-    text: "Night three. You might hear paws in the ceiling tiles or see the shadow of a tail in the hallway glass. He patrols like a hall monitor that never stopped. He believes every wrong answer is a lie, and lies deserve detention in the dark. Keep your answers sharp, and don't let the dread bar fill.",
-  },
-  {
-    title: "Detention Ledger",
-    text: "Night four. The office ledger lists every student he failed, every name he crossed out. He still thinks he's teaching. He still thinks you're here to help. But the moment the bell rings and you stumble, he'll tear the words from your throat so you can't call for help again.",
-  },
-  {
-    title: "Final Bell",
-    text: "Night five. The final bell is rusted, but he hears it. He wants you to finish the tests he never could. Keep calm, keep answering, and maybe you'll survive the last lesson. If you don't, the mouse will drag you into the dark and the halls will stay quiet forever.",
-  },
-];
+const loreByGrade = {
+  1: [
+    {
+      title: "Overnight Orientation",
+      text: "Hello hello! You started making tests for the first graders overnight. The halls are quiet, the projector is buzzing, and the secretary keeps a neat little ledger. She says a teacher never left the building, the kind who counted every mistake and never smiled.",
+    },
+    {
+      title: "The Red Pen",
+      text: "Night two. The secretary's ink wasn't always red. It used to be chalk, and the teacher used to be kind. But the papers came back wrong, and he kept correcting until the classroom emptied. Now the mouse he became hates wrong answers more than silence.",
+    },
+    {
+      title: "Hall Monitor",
+      text: "Night three. You might hear paws in the ceiling tiles or see a shadow in the hallway glass. He patrols like a hall monitor that never stopped. He believes every wrong answer is a lie, and lies deserve detention in the dark.",
+    },
+    {
+      title: "Detention Ledger",
+      text: "Night four. The secretary's ledger lists every student he failed, every name he crossed out. He still thinks he's teaching. He still thinks you're here to help. But the moment the bell rings and you stumble, he'll tear the words from your throat.",
+    },
+    {
+      title: "Final Bell",
+      text: "Night five. The final bell is rusted, but he hears it. He wants you to finish the tests he never could. Keep calm, keep answering, and maybe you'll survive the last lesson.",
+    },
+  ],
+  2: [
+    {
+      title: "Overnight Orientation",
+      text: "Welcome to second grade nights. The halls are quiet, the projector hums, and the principal watches from the office window. He says the building belongs to an old teacher who never accepted a wrong answer.",
+    },
+    {
+      title: "The Red Pen",
+      text: "Night two. The principal still keeps the red pen locked away. The teacher once used chalk and kind words, but the grades came back wrong. He kept correcting until the children were gone, and now the mouse he became hates mistakes.",
+    },
+    {
+      title: "Hall Monitor",
+      text: "Night three. The principal swears he hears paws in the ceiling tiles. A shadow moves across the hallway glass. He patrols like a hall monitor that never stopped, and every wrong answer feels like detention in the dark.",
+    },
+    {
+      title: "Detention Ledger",
+      text: "Night four. The principal's ledger lists every student he failed, every name crossed out. He still thinks he's teaching. He still thinks you're here to help. But stumble when the bell rings and he'll take your voice.",
+    },
+    {
+      title: "Final Bell",
+      text: "Night five. The final bell is rusted, but he hears it. He wants you to finish the tests he never could. Keep your answers sharp if you want to make it home.",
+    },
+  ],
+  3: [
+    {
+      title: "Overnight Orientation",
+      text: "Third grade nights begin with a substitute teacher who never left the classroom. The halls are quiet, the projector buzzes, and he keeps count of every mark he would have made.",
+    },
+    {
+      title: "The Red Pen",
+      text: "Night two. The substitute's pen wasn't always red. It used to be chalk, and he used to be kind. But the grades came back wrong, and he kept correcting until the desks went cold.",
+    },
+    {
+      title: "Hall Monitor",
+      text: "Night three. You might hear paws in the ceiling tiles or see the shadow of a tail in the hallway glass. He patrols like a hall monitor that never stopped and believes every wrong answer is a lie.",
+    },
+    {
+      title: "Detention Ledger",
+      text: "Night four. The substitute's notes list every student he failed, every name he crossed out. He still thinks he's teaching. He still thinks you're here to help. But the moment the bell rings and you stumble, he'll take your voice.",
+    },
+    {
+      title: "Final Bell",
+      text: "Night five. The final bell is rusted, but he hears it. He wants you to finish the tests he never could. Keep calm, keep answering, and maybe you'll survive the last lesson.",
+    },
+  ],
+  4: [
+    {
+      title: "Overnight Orientation",
+      text: "Fourth grade nights come with a parent who won't stop complaining. The halls are quiet, the projector is buzzing, and the parent keeps demanding perfect scores from an old teacher who never left.",
+    },
+    {
+      title: "The Red Pen",
+      text: "Night two. The parent keeps a stack of marked papers. The teacher used to be kind, but the grades came back wrong, and he kept correcting until the classroom emptied.",
+    },
+    {
+      title: "Hall Monitor",
+      text: "Night three. The parent swears the hall monitor never sleeps. Paws in the ceiling tiles, a tail in the hallway glass. He believes every wrong answer is a lie, and lies deserve detention in the dark.",
+    },
+    {
+      title: "Detention Ledger",
+      text: "Night four. The parent shoved a detention ledger across the desk, every name crossed out. He still thinks he's teaching. He still thinks you're here to help. But the moment the bell rings and you stumble, he'll tear the words from your throat.",
+    },
+    {
+      title: "Final Bell",
+      text: "Night five. The final bell is rusted, but he hears it. He wants you to finish the tests he never could. Keep your answers sharp if you want to make it home.",
+    },
+  ],
+  5: [
+    {
+      title: "Overnight Orientation",
+      text: "Fifth grade nights are the hardest. The halls are quiet, the projector hums, and the librarian whispers about a teacher who never left the building and never forgave a mistake.",
+    },
+    {
+      title: "The Red Pen",
+      text: "Night two. The librarian says the ink wasn't always red. It used to be chalk, and the teacher used to be kind. But the grades came back wrong, and he kept correcting until the children were gone.",
+    },
+    {
+      title: "Hall Monitor",
+      text: "Night three. You might hear paws in the ceiling tiles or see the shadow of a tail in the hallway glass. He patrols like a hall monitor that never stopped. He believes every wrong answer is a lie.",
+    },
+    {
+      title: "Detention Ledger",
+      text: "Night four. The librarian keeps a ledger of every student he failed, every name crossed out. He still thinks he's teaching. He still thinks you're here to help. But the moment the bell rings and you stumble, he'll take your voice.",
+    },
+    {
+      title: "Final Bell",
+      text: "Night five. The final bell is rusted, but he hears it. He wants you to finish the tests he never could. Keep calm, keep answering, and maybe you'll survive the last lesson.",
+    },
+  ],
+};
 
 function setActiveButton(buttons, value, key) {
   buttons.forEach((button) => {
@@ -160,18 +258,24 @@ function buzz(duration = 0.25) {
 }
 
 async function loadQuestions() {
-  // Add new questions by editing questions.json with the schema:
+  // Add new questions by editing grade*.json with the schema:
   // id, gradeMin, gradeMax, category, prompt, choices[], answerIndex,
   // optional passage (reading), hint, difficulty (1-3).
-  const response = await fetch("questions.json");
-  const data = await response.json();
-  state.questions = data;
+  const entries = await Promise.all(
+    Object.entries(GRADE_FILES).map(async ([grade, file]) => {
+      const response = await fetch(file);
+      const data = await response.json();
+      return [parseInt(grade, 10), data];
+    })
+  );
+  state.questionsByGrade = Object.fromEntries(entries);
+  state.questions = state.questionsByGrade[state.grade] || [];
 }
 
 function filterQuestions() {
   const difficultyCap = Math.min(3, state.night);
   return state.questions.filter((q) => {
-    const inGrade = state.grade === q.gradeMin && state.grade === q.gradeMax;
+    const inGrade = state.grade >= q.gradeMin && state.grade <= q.gradeMax;
     const inDifficulty = q.difficulty ? q.difficulty <= difficultyCap : true;
     return inGrade && inDifficulty;
   });
@@ -271,33 +375,41 @@ function renderQuestion(question) {
   }
   choicesEl.innerHTML = "";
   question.choices.forEach((choice, index) => {
+    const row = document.createElement("div");
+    row.className = "choice-row";
     const button = document.createElement("button");
     button.className = "choice-btn";
     button.dataset.index = index;
     button.innerHTML = `<span class="choice-label">${LETTERS[index]}</span> ${choice}`;
     button.addEventListener("click", () => handleAnswer(index));
-    choicesEl.appendChild(button);
+    const soundButton = document.createElement("button");
+    soundButton.className = "choice-sound";
+    soundButton.type = "button";
+    soundButton.innerHTML = "🔊";
+    soundButton.setAttribute("aria-label", `Read answer choice ${LETTERS[index]}`);
+    soundButton.addEventListener("click", (event) => {
+      event.stopPropagation();
+      speakText(choice);
+    });
+    row.appendChild(button);
+    row.appendChild(soundButton);
+    choicesEl.appendChild(row);
   });
   speakQuestion(question);
 }
 
-function speakQuestion(question) {
+function speakText(text) {
   if (!speechSynth || typeof SpeechSynthesisUtterance === "undefined") {
     return;
   }
-  const parts = [];
-  if (question.passage) {
-    parts.push(`Passage: ${question.passage}`);
-  }
-  parts.push(question.prompt);
-  const answers = question.choices
-    .map((choice, index) => `${LETTERS[index]}. ${choice}`)
-    .join(" ");
-  parts.push(`Answer choices: ${answers}`);
   speechSynth.cancel();
-  const utterance = new SpeechSynthesisUtterance(parts.join(" "));
+  const utterance = new SpeechSynthesisUtterance(text);
   utterance.rate = 0.95;
   speechSynth.speak(utterance);
+}
+
+function speakQuestion(question) {
+  speakText(question.prompt);
 }
 
 function showFeedback(text, type, hint) {
@@ -476,7 +588,7 @@ function showLore() {
     return Promise.resolve();
   }
   const segmentIndex = Math.min(state.night, MAX_NIGHTS) - 1;
-  const segment = loreSegments[segmentIndex];
+  const segment = (loreByGrade[state.grade] || loreByGrade[3])[segmentIndex];
   loreNightEl.textContent = `Night ${state.night} of ${MAX_NIGHTS}`;
   loreTitleEl.textContent = segment.title;
   loreSubtitleEl.textContent = segment.text;
@@ -534,6 +646,7 @@ function applySelections() {
   state.mode = "night";
   state.playerName = customNameInput.value.trim() || "Player";
   state.night = 1;
+  state.questions = state.questionsByGrade[state.grade] || [];
 }
 
 function handleKeyboard(e) {
