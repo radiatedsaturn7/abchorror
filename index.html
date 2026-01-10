@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    ABC Horror
+    Run locally with any static server, for example:
+    python -m http.server
+  -->
+  <title>ABC Horror</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app">
+    <section id="start-screen" class="screen active">
+      <div class="card">
+        <h1>ABC Horror</h1>
+        <p class="subtitle">A spooky, kid-safe quiz night in the office.</p>
+
+        <div class="field-group">
+          <label>Choose your grade</label>
+          <div class="grade-options" role="radiogroup" aria-label="Grade selection">
+            <button class="chip" data-grade="1">1</button>
+            <button class="chip" data-grade="2">2</button>
+            <button class="chip" data-grade="3">3</button>
+            <button class="chip" data-grade="4">4</button>
+            <button class="chip" data-grade="5">5</button>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label>Player name</label>
+          <div class="name-options">
+            <button class="chip" data-name="Mark">Mark</button>
+            <button class="chip" data-name="James">James</button>
+            <button class="chip" data-name="Eddie">Eddie</button>
+          </div>
+          <input id="custom-name" type="text" placeholder="Or type your name" />
+        </div>
+
+        <div class="field-group">
+          <label>Mode</label>
+          <div class="mode-options" role="radiogroup" aria-label="Mode selection">
+            <button class="chip" data-mode="night">Night Shift</button>
+            <button class="chip" data-mode="speed">Speed Round</button>
+            <button class="chip" data-mode="match">Match-Up</button>
+          </div>
+        </div>
+
+        <button id="start-btn" class="primary">Start Night</button>
+        <p class="note">Tip: Use keys 1–4 to answer. Press Enter to continue.</p>
+      </div>
+    </section>
+
+    <section id="game-screen" class="screen">
+      <div class="overlay vignette"></div>
+      <div class="overlay flicker"></div>
+      <div id="shadow-edge" class="shadow-edge" aria-hidden="true"></div>
+
+      <header class="hud">
+        <div>
+          <div class="label">Night Progress</div>
+          <div class="bar">
+            <div id="progress-bar" class="bar-fill"></div>
+          </div>
+        </div>
+        <div>
+          <div class="label">DREAD</div>
+          <div class="bar danger">
+            <div id="dread-bar" class="bar-fill"></div>
+          </div>
+        </div>
+        <div class="hud-stats">
+          <span id="player-name">Player</span>
+          <span id="mode-label">Night Shift</span>
+          <span id="timer" class="timer hidden">00</span>
+        </div>
+      </header>
+
+      <div class="question-panel" role="region" aria-live="polite">
+        <span id="category" class="badge">Category</span>
+        <h2 id="prompt">Question prompt</h2>
+        <p id="passage" class="passage hidden"></p>
+        <div id="choices" class="choices"></div>
+        <div id="feedback" class="feedback hidden"></div>
+      </div>
+    </section>
+
+    <section id="win-screen" class="screen">
+      <div class="card">
+        <h2>You Survived the Night</h2>
+        <p id="stats"></p>
+        <button id="next-night" class="primary">Next Night</button>
+        <button id="back-home" class="ghost">Back to Menu</button>
+      </div>
+    </section>
+
+    <div id="jumpscare" class="jumpscare hidden" aria-hidden="true">
+      <img src="assets/scare.png" alt="Spooky silhouette" />
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
