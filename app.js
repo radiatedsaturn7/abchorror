@@ -4,8 +4,6 @@ const winScreen = document.getElementById("win-screen");
 const jumpscare = document.getElementById("jumpscare");
 
 const gradeButtons = document.querySelectorAll(".grade-options .chip");
-const nameButtons = document.querySelectorAll(".name-options .chip");
-const modeButtons = document.querySelectorAll(".mode-options .chip");
 const customNameInput = document.getElementById("custom-name");
 const startButton = document.getElementById("start-btn");
 
@@ -26,6 +24,7 @@ const backHomeBtn = document.getElementById("back-home");
 const powerFlicker = document.getElementById("power-flicker");
 const retryBtn = document.getElementById("retry-btn");
 const flickerSprite = document.getElementById("flicker-sprite");
+const randomFlicker = document.getElementById("random-flicker");
 
 const LETTERS = ["A", "B", "C", "D"];
 const MODE_LABELS = {
@@ -71,8 +70,6 @@ const deskScenes = ["desk1.png", "desk2.png", "desk3.png"];
 
 const selectors = {
   grade: 3,
-  mode: "night",
-  name: "Mark",
 };
 
 function setActiveButton(buttons, value, key) {
@@ -84,8 +81,6 @@ function setActiveButton(buttons, value, key) {
 
 function initSelectors() {
   setActiveButton(gradeButtons, String(selectors.grade), "grade");
-  setActiveButton(modeButtons, selectors.mode, "mode");
-  setActiveButton(nameButtons, selectors.name, "name");
 }
 
 function unlockAudio() {
@@ -411,27 +406,15 @@ function startGame() {
   nextQuestion();
 }
 
-function setMode(mode) {
-  selectors.mode = mode;
-  setActiveButton(modeButtons, selectors.mode, "mode");
-  const isSpeed = mode === "speed";
-  config.progressPerCorrect = isSpeed ? 10 : 10;
-}
-
 function setGrade(grade) {
   selectors.grade = grade;
   setActiveButton(gradeButtons, String(selectors.grade), "grade");
 }
 
-function setName(name) {
-  selectors.name = name;
-  setActiveButton(nameButtons, selectors.name, "name");
-}
-
 function applySelections() {
   state.grade = selectors.grade;
-  state.mode = selectors.mode;
-  state.playerName = customNameInput.value.trim() || selectors.name;
+  state.mode = "night";
+  state.playerName = customNameInput.value.trim() || "Player";
 }
 
 function handleKeyboard(e) {
@@ -461,15 +444,26 @@ function startDreadDecay() {
   }, 100);
 }
 
+function startRandomFlicker() {
+  if (!randomFlicker) {
+    return;
+  }
+  setInterval(() => {
+    if (!gameScreen.classList.contains("active")) {
+      return;
+    }
+    if (Math.random() <= 0.65) {
+      return;
+    }
+    randomFlicker.classList.remove("active");
+    void randomFlicker.offsetWidth;
+    randomFlicker.classList.add("active");
+  }, 900);
+}
+
 function startListeners() {
   gradeButtons.forEach((button) =>
     button.addEventListener("click", () => setGrade(parseInt(button.dataset.grade, 10)))
-  );
-  nameButtons.forEach((button) =>
-    button.addEventListener("click", () => setName(button.dataset.name))
-  );
-  modeButtons.forEach((button) =>
-    button.addEventListener("click", () => setMode(button.dataset.mode))
   );
 
   startButton.addEventListener("click", () => {
@@ -501,6 +495,7 @@ async function init() {
   initSelectors();
   startListeners();
   startDreadDecay();
+  startRandomFlicker();
   await loadQuestions();
 }
 
