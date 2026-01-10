@@ -19,12 +19,18 @@ const playerNameEl = document.getElementById("player-name");
 const modeLabelEl = document.getElementById("mode-label");
 const shadowEdge = document.getElementById("shadow-edge");
 const statsEl = document.getElementById("stats");
+const winTitleEl = document.getElementById("win-title");
 const nextNightBtn = document.getElementById("next-night");
 const backHomeBtn = document.getElementById("back-home");
 const powerFlicker = document.getElementById("power-flicker");
 const retryBtn = document.getElementById("retry-btn");
 const flickerSprite = document.getElementById("flicker-sprite");
 const randomFlicker = document.getElementById("random-flicker");
+const loreOverlay = document.getElementById("lore-overlay");
+const loreNightEl = document.getElementById("lore-night");
+const loreTitleEl = document.getElementById("lore-title");
+const loreSubtitleEl = document.getElementById("lore-subtitle");
+const loreContinueBtn = document.getElementById("lore-continue");
 
 const LETTERS = ["A", "B", "C", "D"];
 const MODE_LABELS = {
@@ -32,6 +38,7 @@ const MODE_LABELS = {
   speed: "Speed Round",
   match: "Match-Up",
 };
+const MAX_NIGHTS = 5;
 
 const defaultConfig = {
   dreadThreshold: 100,
@@ -63,6 +70,9 @@ const state = {
   audioUnlocked: false,
   audioContext: null,
   deskStage: -1,
+  questionQueue: [],
+  loreActive: false,
+  loreUtterance: null,
 };
 
 const config = { ...defaultConfig };
@@ -72,6 +82,29 @@ const speechSynth = window.speechSynthesis || null;
 const selectors = {
   grade: 3,
 };
+
+const loreSegments = [
+  {
+    title: "Overnight Orientation",
+    text: "Hello hello! I heard you started the job making tests for kids overnight. The halls are quiet, the projector is buzzing, and somewhere in this school an old teacher keeps count. He used to be the kind that never smiled, the kind who wrote the hard tests. Then the failures piled up. He couldn't stand it. He called it mercy. He called it grading. And he never left the building.",
+  },
+  {
+    title: "The Red Pen",
+    text: "Night two. The ink stains on the desk weren't always red. They used to be chalk, and the man used to be kind. But the grades came back wrong, and he kept correcting until the children were gone. Now the mouse he became hates wrong answers more than silence. If you miss too many, he takes your voice so you can never plead again.",
+  },
+  {
+    title: "Hall Monitor",
+    text: "Night three. You might hear paws in the ceiling tiles or see the shadow of a tail in the hallway glass. He patrols like a hall monitor that never stopped. He believes every wrong answer is a lie, and lies deserve detention in the dark. Keep your answers sharp, and don't let the dread bar fill.",
+  },
+  {
+    title: "Detention Ledger",
+    text: "Night four. The office ledger lists every student he failed, every name he crossed out. He still thinks he's teaching. He still thinks you're here to help. But the moment the bell rings and you stumble, he'll tear the words from your throat so you can't call for help again.",
+  },
+  {
+    title: "Final Bell",
+    text: "Night five. The final bell is rusted, but he hears it. He wants you to finish the tests he never could. Keep calm, keep answering, and maybe you'll survive the last lesson. If you don't, the mouse will drag you into the dark and the halls will stay quiet forever.",
+  },
+];
 
 function setActiveButton(buttons, value, key) {
   buttons.forEach((button) => {
@@ -138,14 +171,19 @@ async function loadQuestions() {
 function filterQuestions() {
   const difficultyCap = Math.min(3, state.night);
   return state.questions.filter((q) => {
-    const inGrade = state.grade >= q.gradeMin && state.grade <= q.gradeMax;
+    const inGrade = state.grade === q.gradeMin && state.grade === q.gradeMax;
     const inDifficulty = q.difficulty ? q.difficulty <= difficultyCap : true;
     return inGrade && inDifficulty;
   });
 }
 
 function shuffle(array) {
-  return array.slice().sort(() => Math.random() - 0.5);
+  const copy = array.slice();
+  for (let i = copy.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
 }
 
 function pickRandomQuestion(questions) {
@@ -198,6 +236,9 @@ function resetState() {
   state.timerSeconds = 0;
   state.questionsAnswered = 0;
   state.deskStage = -1;
+  state.questionQueue = [];
+  state.loreActive = false;
+  state.loreUtterance = null;
 }
 
 function showScreen(screen) {
@@ -390,10 +431,16 @@ function stopTimer() {
 }
 
 function nextQuestion() {
-  const available = filterQuestions();
-  let question = pickRandomQuestion(available);
+  if (!state.questionQueue.length) {
+    state.questionQueue = shuffle(filterQuestions());
+  }
+  const available = state.questionQueue.length ? state.questionQueue : filterQuestions();
+  let question = available.shift();
+  if (!question) {
+    return;
+  }
   if (state.mode === "match") {
-    question = buildMatchQuestion(available);
+    question = buildMatchQuestion(filterQuestions());
   }
   renderQuestion(question);
   startTimer();
@@ -415,6 +462,53 @@ function endNight() {
   stopTimer();
   showScreen(winScreen);
   statsEl.innerHTML = `Correct: ${state.correct} <br />Wrong: ${state.wrong} <br />Best streak: ${state.bestStreak} <br />Scares: ${state.scares}`;
+  if (state.night >= MAX_NIGHTS) {
+    winTitleEl.textContent = "You Survived All Five Nights";
+    nextNightBtn.classList.add("hidden");
+  } else {
+    winTitleEl.textContent = "You Survived the Night";
+    nextNightBtn.classList.remove("hidden");
+  }
+}
+
+function showLore() {
+  if (!loreOverlay) {
+    return Promise.resolve();
+  }
+  const segmentIndex = Math.min(state.night, MAX_NIGHTS) - 1;
+  const segment = loreSegments[segmentIndex];
+  loreNightEl.textContent = `Night ${state.night} of ${MAX_NIGHTS}`;
+  loreTitleEl.textContent = segment.title;
+  loreSubtitleEl.textContent = segment.text;
+  loreOverlay.classList.remove("hidden");
+  state.loreActive = true;
+
+  return new Promise((resolve) => {
+    const startNight = () => {
+      if (!state.loreActive) {
+        return;
+      }
+      state.loreActive = false;
+      loreOverlay.classList.add("hidden");
+      if (speechSynth) {
+        speechSynth.cancel();
+      }
+      resolve();
+    };
+
+    loreContinueBtn.onclick = startNight;
+
+    if (!speechSynth || typeof SpeechSynthesisUtterance === "undefined") {
+      return;
+    }
+
+    speechSynth.cancel();
+    const utterance = new SpeechSynthesisUtterance(segment.text);
+    utterance.rate = 0.92;
+    utterance.onend = startNight;
+    state.loreUtterance = utterance;
+    speechSynth.speak(utterance);
+  });
 }
 
 function startGame() {
@@ -424,7 +518,10 @@ function startGame() {
   updateBars();
   jumpscare.classList.add("hidden");
   showScreen(gameScreen);
-  nextQuestion();
+  state.questionQueue = shuffle(filterQuestions());
+  showLore().then(() => {
+    nextQuestion();
+  });
 }
 
 function setGrade(grade) {
@@ -436,6 +533,7 @@ function applySelections() {
   state.grade = selectors.grade;
   state.mode = "night";
   state.playerName = customNameInput.value.trim() || "Player";
+  state.night = 1;
 }
 
 function handleKeyboard(e) {
@@ -494,6 +592,10 @@ function startListeners() {
   });
 
   nextNightBtn.addEventListener("click", () => {
+    if (state.night >= MAX_NIGHTS) {
+      showScreen(startScreen);
+      return;
+    }
     state.night += 1;
     startGame();
   });

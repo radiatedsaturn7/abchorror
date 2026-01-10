@@ -22938,5 +22938,7505 @@
     ],
     "answerIndex": 0,
     "difficulty": 3
+  },
+  {
+    "id": "extra-g1-math-1",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 2 + 1?",
+    "choices": [
+      "3",
+      "2",
+      "4",
+      "5"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-2",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 3 + 3?",
+    "choices": [
+      "6",
+      "5",
+      "7",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-3",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 4 + 5?",
+    "choices": [
+      "9",
+      "8",
+      "10",
+      "11"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-4",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 5 + 7?",
+    "choices": [
+      "12",
+      "11",
+      "13",
+      "14"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-5",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 6 + 1?",
+    "choices": [
+      "7",
+      "6",
+      "8",
+      "9"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-6",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 7 + 3?",
+    "choices": [
+      "10",
+      "9",
+      "11",
+      "12"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-7",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 8 + 5?",
+    "choices": [
+      "13",
+      "12",
+      "14",
+      "15"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-8",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 9 + 7?",
+    "choices": [
+      "16",
+      "15",
+      "17",
+      "18"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-9",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 10 + 1?",
+    "choices": [
+      "11",
+      "10",
+      "12",
+      "13"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-10",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 2 + 3?",
+    "choices": [
+      "5",
+      "4",
+      "6",
+      "7"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-11",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 3 + 5?",
+    "choices": [
+      "8",
+      "7",
+      "9",
+      "10"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-12",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 4 + 7?",
+    "choices": [
+      "11",
+      "10",
+      "12",
+      "13"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-13",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 5 + 1?",
+    "choices": [
+      "6",
+      "5",
+      "7",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-14",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 6 + 3?",
+    "choices": [
+      "9",
+      "8",
+      "10",
+      "11"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-15",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 7 + 5?",
+    "choices": [
+      "12",
+      "11",
+      "13",
+      "14"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-16",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 8 + 7?",
+    "choices": [
+      "15",
+      "14",
+      "16",
+      "17"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-17",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 9 + 1?",
+    "choices": [
+      "10",
+      "9",
+      "11",
+      "12"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-18",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 10 + 3?",
+    "choices": [
+      "13",
+      "12",
+      "14",
+      "15"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-19",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 2 + 5?",
+    "choices": [
+      "7",
+      "6",
+      "8",
+      "9"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-20",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 3 + 7?",
+    "choices": [
+      "10",
+      "9",
+      "11",
+      "12"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-21",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 4 + 1?",
+    "choices": [
+      "5",
+      "4",
+      "6",
+      "7"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-22",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 5 + 3?",
+    "choices": [
+      "8",
+      "7",
+      "9",
+      "10"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-23",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 6 + 5?",
+    "choices": [
+      "11",
+      "10",
+      "12",
+      "13"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-24",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 7 + 7?",
+    "choices": [
+      "14",
+      "13",
+      "15",
+      "16"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-25",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 8 + 1?",
+    "choices": [
+      "9",
+      "8",
+      "10",
+      "11"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-26",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 9 + 3?",
+    "choices": [
+      "12",
+      "11",
+      "13",
+      "14"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-27",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 10 + 5?",
+    "choices": [
+      "15",
+      "14",
+      "16",
+      "17"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-28",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 2 + 7?",
+    "choices": [
+      "9",
+      "8",
+      "10",
+      "11"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-29",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 3 + 1?",
+    "choices": [
+      "4",
+      "3",
+      "5",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-30",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 4 + 3?",
+    "choices": [
+      "7",
+      "6",
+      "8",
+      "9"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-31",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 5 + 5?",
+    "choices": [
+      "10",
+      "9",
+      "11",
+      "12"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-32",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 6 + 7?",
+    "choices": [
+      "13",
+      "12",
+      "14",
+      "15"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-33",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 7 + 1?",
+    "choices": [
+      "8",
+      "7",
+      "9",
+      "10"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-34",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 8 + 3?",
+    "choices": [
+      "11",
+      "10",
+      "12",
+      "13"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-35",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 9 + 5?",
+    "choices": [
+      "14",
+      "13",
+      "15",
+      "16"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-36",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 10 + 7?",
+    "choices": [
+      "17",
+      "16",
+      "18",
+      "19"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-37",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 2 + 1?",
+    "choices": [
+      "3",
+      "2",
+      "4",
+      "5"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-38",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 3 + 3?",
+    "choices": [
+      "6",
+      "5",
+      "7",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-39",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 4 + 5?",
+    "choices": [
+      "9",
+      "8",
+      "10",
+      "11"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-40",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 5 + 7?",
+    "choices": [
+      "12",
+      "11",
+      "13",
+      "14"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-41",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 6 + 1?",
+    "choices": [
+      "7",
+      "6",
+      "8",
+      "9"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-42",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 7 + 3?",
+    "choices": [
+      "10",
+      "9",
+      "11",
+      "12"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-43",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 8 + 5?",
+    "choices": [
+      "13",
+      "12",
+      "14",
+      "15"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-44",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 9 + 7?",
+    "choices": [
+      "16",
+      "15",
+      "17",
+      "18"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-45",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 10 + 1?",
+    "choices": [
+      "11",
+      "10",
+      "12",
+      "13"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-46",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 2 + 3?",
+    "choices": [
+      "5",
+      "4",
+      "6",
+      "7"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-47",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 3 + 5?",
+    "choices": [
+      "8",
+      "7",
+      "9",
+      "10"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-48",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 4 + 7?",
+    "choices": [
+      "11",
+      "10",
+      "12",
+      "13"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-49",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 5 + 1?",
+    "choices": [
+      "6",
+      "5",
+      "7",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-math-50",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "math",
+    "prompt": "What is 6 + 3?",
+    "choices": [
+      "9",
+      "8",
+      "10",
+      "11"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-1",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means happy?",
+    "choices": [
+      "glad",
+      "sad",
+      "tired",
+      "angry"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-2",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What do plants need to grow?",
+    "choices": [
+      "sunlight",
+      "candy",
+      "toys",
+      "sand"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-3",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means big?",
+    "choices": [
+      "large",
+      "tiny",
+      "short",
+      "thin"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-4",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "Which animal says 'moo'?",
+    "choices": [
+      "cow",
+      "dog",
+      "cat",
+      "duck"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-5",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means small?",
+    "choices": [
+      "little",
+      "giant",
+      "loud",
+      "fast"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-6",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What is the color of the sky on a clear day?",
+    "choices": [
+      "blue",
+      "green",
+      "red",
+      "purple"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-7",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means fast?",
+    "choices": [
+      "quick",
+      "slow",
+      "late",
+      "quiet"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-8",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What do we breathe?",
+    "choices": [
+      "air",
+      "water",
+      "rocks",
+      "fire"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-9",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means quiet?",
+    "choices": [
+      "silent",
+      "noisy",
+      "bright",
+      "empty"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-10",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "Which season is the coldest?",
+    "choices": [
+      "winter",
+      "summer",
+      "spring",
+      "fall"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-11",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means happy?",
+    "choices": [
+      "glad",
+      "sad",
+      "tired",
+      "angry"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-12",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What do plants need to grow?",
+    "choices": [
+      "sunlight",
+      "candy",
+      "toys",
+      "sand"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-13",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means big?",
+    "choices": [
+      "large",
+      "tiny",
+      "short",
+      "thin"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-14",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "Which animal says 'moo'?",
+    "choices": [
+      "cow",
+      "dog",
+      "cat",
+      "duck"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-15",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means small?",
+    "choices": [
+      "little",
+      "giant",
+      "loud",
+      "fast"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-16",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What is the color of the sky on a clear day?",
+    "choices": [
+      "blue",
+      "green",
+      "red",
+      "purple"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-17",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means fast?",
+    "choices": [
+      "quick",
+      "slow",
+      "late",
+      "quiet"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-18",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What do we breathe?",
+    "choices": [
+      "air",
+      "water",
+      "rocks",
+      "fire"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-19",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means quiet?",
+    "choices": [
+      "silent",
+      "noisy",
+      "bright",
+      "empty"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-20",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "Which season is the coldest?",
+    "choices": [
+      "winter",
+      "summer",
+      "spring",
+      "fall"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-21",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means happy?",
+    "choices": [
+      "glad",
+      "sad",
+      "tired",
+      "angry"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-22",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What do plants need to grow?",
+    "choices": [
+      "sunlight",
+      "candy",
+      "toys",
+      "sand"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-23",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means big?",
+    "choices": [
+      "large",
+      "tiny",
+      "short",
+      "thin"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-24",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "Which animal says 'moo'?",
+    "choices": [
+      "cow",
+      "dog",
+      "cat",
+      "duck"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-25",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means small?",
+    "choices": [
+      "little",
+      "giant",
+      "loud",
+      "fast"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-26",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What is the color of the sky on a clear day?",
+    "choices": [
+      "blue",
+      "green",
+      "red",
+      "purple"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-27",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means fast?",
+    "choices": [
+      "quick",
+      "slow",
+      "late",
+      "quiet"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-28",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What do we breathe?",
+    "choices": [
+      "air",
+      "water",
+      "rocks",
+      "fire"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-29",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means quiet?",
+    "choices": [
+      "silent",
+      "noisy",
+      "bright",
+      "empty"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-30",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "Which season is the coldest?",
+    "choices": [
+      "winter",
+      "summer",
+      "spring",
+      "fall"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-31",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means happy?",
+    "choices": [
+      "glad",
+      "sad",
+      "tired",
+      "angry"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-32",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What do plants need to grow?",
+    "choices": [
+      "sunlight",
+      "candy",
+      "toys",
+      "sand"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-33",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means big?",
+    "choices": [
+      "large",
+      "tiny",
+      "short",
+      "thin"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-34",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "Which animal says 'moo'?",
+    "choices": [
+      "cow",
+      "dog",
+      "cat",
+      "duck"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-35",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means small?",
+    "choices": [
+      "little",
+      "giant",
+      "loud",
+      "fast"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-36",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What is the color of the sky on a clear day?",
+    "choices": [
+      "blue",
+      "green",
+      "red",
+      "purple"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-37",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means fast?",
+    "choices": [
+      "quick",
+      "slow",
+      "late",
+      "quiet"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-38",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What do we breathe?",
+    "choices": [
+      "air",
+      "water",
+      "rocks",
+      "fire"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-39",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means quiet?",
+    "choices": [
+      "silent",
+      "noisy",
+      "bright",
+      "empty"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-40",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "Which season is the coldest?",
+    "choices": [
+      "winter",
+      "summer",
+      "spring",
+      "fall"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-41",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means happy?",
+    "choices": [
+      "glad",
+      "sad",
+      "tired",
+      "angry"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-42",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What do plants need to grow?",
+    "choices": [
+      "sunlight",
+      "candy",
+      "toys",
+      "sand"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-43",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means big?",
+    "choices": [
+      "large",
+      "tiny",
+      "short",
+      "thin"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-44",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "Which animal says 'moo'?",
+    "choices": [
+      "cow",
+      "dog",
+      "cat",
+      "duck"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-45",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means small?",
+    "choices": [
+      "little",
+      "giant",
+      "loud",
+      "fast"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-46",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What is the color of the sky on a clear day?",
+    "choices": [
+      "blue",
+      "green",
+      "red",
+      "purple"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-47",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means fast?",
+    "choices": [
+      "quick",
+      "slow",
+      "late",
+      "quiet"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-48",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "What do we breathe?",
+    "choices": [
+      "air",
+      "water",
+      "rocks",
+      "fire"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-49",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "reading",
+    "prompt": "Which word means quiet?",
+    "choices": [
+      "silent",
+      "noisy",
+      "bright",
+      "empty"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g1-mix-50",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "science",
+    "prompt": "Which season is the coldest?",
+    "choices": [
+      "winter",
+      "summer",
+      "spring",
+      "fall"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-1",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 10 + 3?",
+    "choices": [
+      "13",
+      "15",
+      "11",
+      "18"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-2",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 11 - 6?",
+    "choices": [
+      "5",
+      "8",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-3",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 12 + 9?",
+    "choices": [
+      "21",
+      "23",
+      "19",
+      "26"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-4",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 13 - 12?",
+    "choices": [
+      "1",
+      "4",
+      "-1",
+      "2"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-5",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 14 + 5?",
+    "choices": [
+      "19",
+      "21",
+      "17",
+      "24"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-6",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 15 - 8?",
+    "choices": [
+      "7",
+      "10",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-7",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 16 + 11?",
+    "choices": [
+      "27",
+      "29",
+      "25",
+      "32"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-8",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 17 - 4?",
+    "choices": [
+      "13",
+      "16",
+      "11",
+      "14"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-9",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 18 + 7?",
+    "choices": [
+      "25",
+      "27",
+      "23",
+      "30"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-10",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 19 - 10?",
+    "choices": [
+      "9",
+      "12",
+      "7",
+      "10"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-11",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 20 + 3?",
+    "choices": [
+      "23",
+      "25",
+      "21",
+      "28"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-12",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 21 - 6?",
+    "choices": [
+      "15",
+      "18",
+      "13",
+      "16"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-13",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 22 + 9?",
+    "choices": [
+      "31",
+      "33",
+      "29",
+      "36"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-14",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 23 - 12?",
+    "choices": [
+      "11",
+      "14",
+      "9",
+      "12"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-15",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 24 + 5?",
+    "choices": [
+      "29",
+      "31",
+      "27",
+      "34"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-16",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 25 - 8?",
+    "choices": [
+      "17",
+      "20",
+      "15",
+      "18"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-17",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 26 + 11?",
+    "choices": [
+      "37",
+      "39",
+      "35",
+      "42"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-18",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 27 - 4?",
+    "choices": [
+      "23",
+      "26",
+      "21",
+      "24"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-19",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 28 + 7?",
+    "choices": [
+      "35",
+      "37",
+      "33",
+      "40"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-20",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 29 - 10?",
+    "choices": [
+      "19",
+      "22",
+      "17",
+      "20"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-21",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 10 + 3?",
+    "choices": [
+      "13",
+      "15",
+      "11",
+      "18"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-22",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 11 - 6?",
+    "choices": [
+      "5",
+      "8",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-23",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 12 + 9?",
+    "choices": [
+      "21",
+      "23",
+      "19",
+      "26"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-24",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 13 - 12?",
+    "choices": [
+      "1",
+      "4",
+      "-1",
+      "2"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-25",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 14 + 5?",
+    "choices": [
+      "19",
+      "21",
+      "17",
+      "24"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-26",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 15 - 8?",
+    "choices": [
+      "7",
+      "10",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-27",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 16 + 11?",
+    "choices": [
+      "27",
+      "29",
+      "25",
+      "32"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-28",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 17 - 4?",
+    "choices": [
+      "13",
+      "16",
+      "11",
+      "14"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-29",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 18 + 7?",
+    "choices": [
+      "25",
+      "27",
+      "23",
+      "30"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-30",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 19 - 10?",
+    "choices": [
+      "9",
+      "12",
+      "7",
+      "10"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-31",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 20 + 3?",
+    "choices": [
+      "23",
+      "25",
+      "21",
+      "28"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-32",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 21 - 6?",
+    "choices": [
+      "15",
+      "18",
+      "13",
+      "16"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-33",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 22 + 9?",
+    "choices": [
+      "31",
+      "33",
+      "29",
+      "36"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-34",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 23 - 12?",
+    "choices": [
+      "11",
+      "14",
+      "9",
+      "12"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-35",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 24 + 5?",
+    "choices": [
+      "29",
+      "31",
+      "27",
+      "34"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-36",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 25 - 8?",
+    "choices": [
+      "17",
+      "20",
+      "15",
+      "18"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-37",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 26 + 11?",
+    "choices": [
+      "37",
+      "39",
+      "35",
+      "42"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-38",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 27 - 4?",
+    "choices": [
+      "23",
+      "26",
+      "21",
+      "24"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-39",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 28 + 7?",
+    "choices": [
+      "35",
+      "37",
+      "33",
+      "40"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-40",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 29 - 10?",
+    "choices": [
+      "19",
+      "22",
+      "17",
+      "20"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-41",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 10 + 3?",
+    "choices": [
+      "13",
+      "15",
+      "11",
+      "18"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-42",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 11 - 6?",
+    "choices": [
+      "5",
+      "8",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-43",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 12 + 9?",
+    "choices": [
+      "21",
+      "23",
+      "19",
+      "26"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-44",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 13 - 12?",
+    "choices": [
+      "1",
+      "4",
+      "-1",
+      "2"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-45",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 14 + 5?",
+    "choices": [
+      "19",
+      "21",
+      "17",
+      "24"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-46",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 15 - 8?",
+    "choices": [
+      "7",
+      "10",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-47",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 16 + 11?",
+    "choices": [
+      "27",
+      "29",
+      "25",
+      "32"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-48",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 17 - 4?",
+    "choices": [
+      "13",
+      "16",
+      "11",
+      "14"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-49",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 18 + 7?",
+    "choices": [
+      "25",
+      "27",
+      "23",
+      "30"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-math-50",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "math",
+    "prompt": "What is 19 - 10?",
+    "choices": [
+      "9",
+      "12",
+      "7",
+      "10"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-1",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means begin?",
+    "choices": [
+      "start",
+      "end",
+      "stop",
+      "sleep"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-2",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What planet do we live on?",
+    "choices": [
+      "Earth",
+      "Mars",
+      "Jupiter",
+      "Venus"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-3",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means smart?",
+    "choices": [
+      "clever",
+      "sleepy",
+      "heavy",
+      "weak"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-4",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "Which part of a plant is underground?",
+    "choices": [
+      "root",
+      "leaf",
+      "flower",
+      "stem"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-5",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means cold?",
+    "choices": [
+      "chilly",
+      "warm",
+      "sticky",
+      "shiny"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-6",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What is frozen water called?",
+    "choices": [
+      "ice",
+      "steam",
+      "fog",
+      "rain"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-7",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means angry?",
+    "choices": [
+      "mad",
+      "glad",
+      "calm",
+      "proud"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-8",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "Which sense uses your ears?",
+    "choices": [
+      "hearing",
+      "taste",
+      "smell",
+      "touch"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-9",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means finish?",
+    "choices": [
+      "complete",
+      "begin",
+      "sing",
+      "climb"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-10",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What do bees make?",
+    "choices": [
+      "honey",
+      "milk",
+      "juice",
+      "oil"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-11",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means begin?",
+    "choices": [
+      "start",
+      "end",
+      "stop",
+      "sleep"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-12",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What planet do we live on?",
+    "choices": [
+      "Earth",
+      "Mars",
+      "Jupiter",
+      "Venus"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-13",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means smart?",
+    "choices": [
+      "clever",
+      "sleepy",
+      "heavy",
+      "weak"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-14",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "Which part of a plant is underground?",
+    "choices": [
+      "root",
+      "leaf",
+      "flower",
+      "stem"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-15",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means cold?",
+    "choices": [
+      "chilly",
+      "warm",
+      "sticky",
+      "shiny"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-16",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What is frozen water called?",
+    "choices": [
+      "ice",
+      "steam",
+      "fog",
+      "rain"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-17",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means angry?",
+    "choices": [
+      "mad",
+      "glad",
+      "calm",
+      "proud"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-18",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "Which sense uses your ears?",
+    "choices": [
+      "hearing",
+      "taste",
+      "smell",
+      "touch"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-19",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means finish?",
+    "choices": [
+      "complete",
+      "begin",
+      "sing",
+      "climb"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-20",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What do bees make?",
+    "choices": [
+      "honey",
+      "milk",
+      "juice",
+      "oil"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-21",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means begin?",
+    "choices": [
+      "start",
+      "end",
+      "stop",
+      "sleep"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-22",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What planet do we live on?",
+    "choices": [
+      "Earth",
+      "Mars",
+      "Jupiter",
+      "Venus"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-23",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means smart?",
+    "choices": [
+      "clever",
+      "sleepy",
+      "heavy",
+      "weak"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-24",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "Which part of a plant is underground?",
+    "choices": [
+      "root",
+      "leaf",
+      "flower",
+      "stem"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-25",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means cold?",
+    "choices": [
+      "chilly",
+      "warm",
+      "sticky",
+      "shiny"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-26",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What is frozen water called?",
+    "choices": [
+      "ice",
+      "steam",
+      "fog",
+      "rain"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-27",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means angry?",
+    "choices": [
+      "mad",
+      "glad",
+      "calm",
+      "proud"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-28",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "Which sense uses your ears?",
+    "choices": [
+      "hearing",
+      "taste",
+      "smell",
+      "touch"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-29",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means finish?",
+    "choices": [
+      "complete",
+      "begin",
+      "sing",
+      "climb"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-30",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What do bees make?",
+    "choices": [
+      "honey",
+      "milk",
+      "juice",
+      "oil"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-31",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means begin?",
+    "choices": [
+      "start",
+      "end",
+      "stop",
+      "sleep"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-32",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What planet do we live on?",
+    "choices": [
+      "Earth",
+      "Mars",
+      "Jupiter",
+      "Venus"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-33",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means smart?",
+    "choices": [
+      "clever",
+      "sleepy",
+      "heavy",
+      "weak"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-34",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "Which part of a plant is underground?",
+    "choices": [
+      "root",
+      "leaf",
+      "flower",
+      "stem"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-35",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means cold?",
+    "choices": [
+      "chilly",
+      "warm",
+      "sticky",
+      "shiny"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-36",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What is frozen water called?",
+    "choices": [
+      "ice",
+      "steam",
+      "fog",
+      "rain"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-37",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means angry?",
+    "choices": [
+      "mad",
+      "glad",
+      "calm",
+      "proud"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-38",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "Which sense uses your ears?",
+    "choices": [
+      "hearing",
+      "taste",
+      "smell",
+      "touch"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-39",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means finish?",
+    "choices": [
+      "complete",
+      "begin",
+      "sing",
+      "climb"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-40",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What do bees make?",
+    "choices": [
+      "honey",
+      "milk",
+      "juice",
+      "oil"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-41",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means begin?",
+    "choices": [
+      "start",
+      "end",
+      "stop",
+      "sleep"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-42",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What planet do we live on?",
+    "choices": [
+      "Earth",
+      "Mars",
+      "Jupiter",
+      "Venus"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-43",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means smart?",
+    "choices": [
+      "clever",
+      "sleepy",
+      "heavy",
+      "weak"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-44",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "Which part of a plant is underground?",
+    "choices": [
+      "root",
+      "leaf",
+      "flower",
+      "stem"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-45",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means cold?",
+    "choices": [
+      "chilly",
+      "warm",
+      "sticky",
+      "shiny"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-46",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What is frozen water called?",
+    "choices": [
+      "ice",
+      "steam",
+      "fog",
+      "rain"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-47",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means angry?",
+    "choices": [
+      "mad",
+      "glad",
+      "calm",
+      "proud"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-48",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "Which sense uses your ears?",
+    "choices": [
+      "hearing",
+      "taste",
+      "smell",
+      "touch"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-49",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "reading",
+    "prompt": "Which word means finish?",
+    "choices": [
+      "complete",
+      "begin",
+      "sing",
+      "climb"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g2-mix-50",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "science",
+    "prompt": "What do bees make?",
+    "choices": [
+      "honey",
+      "milk",
+      "juice",
+      "oil"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "extra-g3-math-1",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 2 \u00d7 2?",
+    "choices": [
+      "4",
+      "6",
+      "2",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-2",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 3 \u00d7 4?",
+    "choices": [
+      "12",
+      "15",
+      "8",
+      "16"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-3",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 4 \u00d7 6?",
+    "choices": [
+      "24",
+      "28",
+      "18",
+      "30"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-4",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 5 \u00d7 8?",
+    "choices": [
+      "40",
+      "45",
+      "32",
+      "48"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-5",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 6 \u00d7 3?",
+    "choices": [
+      "18",
+      "24",
+      "15",
+      "21"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-6",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 7 \u00d7 5?",
+    "choices": [
+      "35",
+      "42",
+      "30",
+      "40"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-7",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 8 \u00d7 7?",
+    "choices": [
+      "56",
+      "64",
+      "49",
+      "63"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-8",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 9 \u00d7 2?",
+    "choices": [
+      "18",
+      "27",
+      "16",
+      "20"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-9",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 10 \u00d7 4?",
+    "choices": [
+      "40",
+      "50",
+      "36",
+      "44"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-10",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 2 \u00d7 6?",
+    "choices": [
+      "12",
+      "14",
+      "6",
+      "18"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-11",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 3 \u00d7 8?",
+    "choices": [
+      "24",
+      "27",
+      "16",
+      "32"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-12",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 4 \u00d7 3?",
+    "choices": [
+      "12",
+      "16",
+      "9",
+      "15"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-13",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 5 \u00d7 5?",
+    "choices": [
+      "25",
+      "30",
+      "20",
+      "30"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-14",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 6 \u00d7 7?",
+    "choices": [
+      "42",
+      "48",
+      "35",
+      "49"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-15",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 7 \u00d7 2?",
+    "choices": [
+      "14",
+      "21",
+      "12",
+      "16"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-16",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 8 \u00d7 4?",
+    "choices": [
+      "32",
+      "40",
+      "28",
+      "36"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-17",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 9 \u00d7 6?",
+    "choices": [
+      "54",
+      "63",
+      "48",
+      "60"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-18",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 10 \u00d7 8?",
+    "choices": [
+      "80",
+      "90",
+      "72",
+      "88"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-19",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 2 \u00d7 3?",
+    "choices": [
+      "6",
+      "8",
+      "3",
+      "9"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-20",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 3 \u00d7 5?",
+    "choices": [
+      "15",
+      "18",
+      "10",
+      "20"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-21",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 4 \u00d7 7?",
+    "choices": [
+      "28",
+      "32",
+      "21",
+      "35"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-22",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 5 \u00d7 2?",
+    "choices": [
+      "10",
+      "15",
+      "8",
+      "12"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-23",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 6 \u00d7 4?",
+    "choices": [
+      "24",
+      "30",
+      "20",
+      "28"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-24",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 7 \u00d7 6?",
+    "choices": [
+      "42",
+      "49",
+      "36",
+      "48"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-25",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 8 \u00d7 8?",
+    "choices": [
+      "64",
+      "72",
+      "56",
+      "72"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-26",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 9 \u00d7 3?",
+    "choices": [
+      "27",
+      "36",
+      "24",
+      "30"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-27",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 10 \u00d7 5?",
+    "choices": [
+      "50",
+      "60",
+      "45",
+      "55"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-28",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 2 \u00d7 7?",
+    "choices": [
+      "14",
+      "16",
+      "7",
+      "21"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-29",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 3 \u00d7 2?",
+    "choices": [
+      "6",
+      "9",
+      "4",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-30",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 4 \u00d7 4?",
+    "choices": [
+      "16",
+      "20",
+      "12",
+      "20"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-31",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 5 \u00d7 6?",
+    "choices": [
+      "30",
+      "35",
+      "24",
+      "36"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-32",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 6 \u00d7 8?",
+    "choices": [
+      "48",
+      "54",
+      "40",
+      "56"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-33",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 7 \u00d7 3?",
+    "choices": [
+      "21",
+      "28",
+      "18",
+      "24"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-34",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 8 \u00d7 5?",
+    "choices": [
+      "40",
+      "48",
+      "35",
+      "45"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-35",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 9 \u00d7 7?",
+    "choices": [
+      "63",
+      "72",
+      "56",
+      "70"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-36",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 10 \u00d7 2?",
+    "choices": [
+      "20",
+      "30",
+      "18",
+      "22"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-37",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 2 \u00d7 4?",
+    "choices": [
+      "8",
+      "10",
+      "4",
+      "12"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-38",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 3 \u00d7 6?",
+    "choices": [
+      "18",
+      "21",
+      "12",
+      "24"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-39",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 4 \u00d7 8?",
+    "choices": [
+      "32",
+      "36",
+      "24",
+      "40"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-40",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 5 \u00d7 3?",
+    "choices": [
+      "15",
+      "20",
+      "12",
+      "18"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-41",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 6 \u00d7 5?",
+    "choices": [
+      "30",
+      "36",
+      "25",
+      "35"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-42",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 7 \u00d7 7?",
+    "choices": [
+      "49",
+      "56",
+      "42",
+      "56"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-43",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 8 \u00d7 2?",
+    "choices": [
+      "16",
+      "24",
+      "14",
+      "18"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-44",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 9 \u00d7 4?",
+    "choices": [
+      "36",
+      "45",
+      "32",
+      "40"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-45",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 10 \u00d7 6?",
+    "choices": [
+      "60",
+      "70",
+      "54",
+      "66"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-46",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 2 \u00d7 8?",
+    "choices": [
+      "16",
+      "18",
+      "8",
+      "24"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-47",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 3 \u00d7 3?",
+    "choices": [
+      "9",
+      "12",
+      "6",
+      "12"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-48",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 4 \u00d7 5?",
+    "choices": [
+      "20",
+      "24",
+      "15",
+      "25"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-49",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 5 \u00d7 7?",
+    "choices": [
+      "35",
+      "40",
+      "28",
+      "42"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-math-50",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "math",
+    "prompt": "What is 6 \u00d7 2?",
+    "choices": [
+      "12",
+      "18",
+      "10",
+      "14"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-1",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means careful?",
+    "choices": [
+      "cautious",
+      "careless",
+      "noisy",
+      "empty"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-2",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "Which planet is known as the Red Planet?",
+    "choices": [
+      "Mars",
+      "Venus",
+      "Mercury",
+      "Neptune"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-3",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means brave?",
+    "choices": [
+      "bold",
+      "timid",
+      "sleepy",
+      "hollow"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-4",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What force pulls objects toward Earth?",
+    "choices": [
+      "gravity",
+      "magnetism",
+      "friction",
+      "light"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-5",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means noisy?",
+    "choices": [
+      "loud",
+      "silent",
+      "tiny",
+      "light"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-6",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "Which organ pumps blood?",
+    "choices": [
+      "heart",
+      "lung",
+      "liver",
+      "brain"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-7",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means choose?",
+    "choices": [
+      "select",
+      "forget",
+      "ignore",
+      "scatter"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-8",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What gas do humans need to breathe?",
+    "choices": [
+      "oxygen",
+      "carbon dioxide",
+      "helium",
+      "nitrogen"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-9",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means honest?",
+    "choices": [
+      "truthful",
+      "sneaky",
+      "lazy",
+      "dull"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-10",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What is the process of water turning into vapor?",
+    "choices": [
+      "evaporation",
+      "freezing",
+      "melting",
+      "condensation"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-11",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means careful?",
+    "choices": [
+      "cautious",
+      "careless",
+      "noisy",
+      "empty"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-12",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "Which planet is known as the Red Planet?",
+    "choices": [
+      "Mars",
+      "Venus",
+      "Mercury",
+      "Neptune"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-13",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means brave?",
+    "choices": [
+      "bold",
+      "timid",
+      "sleepy",
+      "hollow"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-14",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What force pulls objects toward Earth?",
+    "choices": [
+      "gravity",
+      "magnetism",
+      "friction",
+      "light"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-15",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means noisy?",
+    "choices": [
+      "loud",
+      "silent",
+      "tiny",
+      "light"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-16",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "Which organ pumps blood?",
+    "choices": [
+      "heart",
+      "lung",
+      "liver",
+      "brain"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-17",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means choose?",
+    "choices": [
+      "select",
+      "forget",
+      "ignore",
+      "scatter"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-18",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What gas do humans need to breathe?",
+    "choices": [
+      "oxygen",
+      "carbon dioxide",
+      "helium",
+      "nitrogen"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-19",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means honest?",
+    "choices": [
+      "truthful",
+      "sneaky",
+      "lazy",
+      "dull"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-20",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What is the process of water turning into vapor?",
+    "choices": [
+      "evaporation",
+      "freezing",
+      "melting",
+      "condensation"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-21",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means careful?",
+    "choices": [
+      "cautious",
+      "careless",
+      "noisy",
+      "empty"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-22",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "Which planet is known as the Red Planet?",
+    "choices": [
+      "Mars",
+      "Venus",
+      "Mercury",
+      "Neptune"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-23",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means brave?",
+    "choices": [
+      "bold",
+      "timid",
+      "sleepy",
+      "hollow"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-24",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What force pulls objects toward Earth?",
+    "choices": [
+      "gravity",
+      "magnetism",
+      "friction",
+      "light"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-25",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means noisy?",
+    "choices": [
+      "loud",
+      "silent",
+      "tiny",
+      "light"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-26",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "Which organ pumps blood?",
+    "choices": [
+      "heart",
+      "lung",
+      "liver",
+      "brain"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-27",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means choose?",
+    "choices": [
+      "select",
+      "forget",
+      "ignore",
+      "scatter"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-28",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What gas do humans need to breathe?",
+    "choices": [
+      "oxygen",
+      "carbon dioxide",
+      "helium",
+      "nitrogen"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-29",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means honest?",
+    "choices": [
+      "truthful",
+      "sneaky",
+      "lazy",
+      "dull"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-30",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What is the process of water turning into vapor?",
+    "choices": [
+      "evaporation",
+      "freezing",
+      "melting",
+      "condensation"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-31",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means careful?",
+    "choices": [
+      "cautious",
+      "careless",
+      "noisy",
+      "empty"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-32",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "Which planet is known as the Red Planet?",
+    "choices": [
+      "Mars",
+      "Venus",
+      "Mercury",
+      "Neptune"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-33",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means brave?",
+    "choices": [
+      "bold",
+      "timid",
+      "sleepy",
+      "hollow"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-34",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What force pulls objects toward Earth?",
+    "choices": [
+      "gravity",
+      "magnetism",
+      "friction",
+      "light"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-35",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means noisy?",
+    "choices": [
+      "loud",
+      "silent",
+      "tiny",
+      "light"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-36",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "Which organ pumps blood?",
+    "choices": [
+      "heart",
+      "lung",
+      "liver",
+      "brain"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-37",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means choose?",
+    "choices": [
+      "select",
+      "forget",
+      "ignore",
+      "scatter"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-38",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What gas do humans need to breathe?",
+    "choices": [
+      "oxygen",
+      "carbon dioxide",
+      "helium",
+      "nitrogen"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-39",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means honest?",
+    "choices": [
+      "truthful",
+      "sneaky",
+      "lazy",
+      "dull"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-40",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What is the process of water turning into vapor?",
+    "choices": [
+      "evaporation",
+      "freezing",
+      "melting",
+      "condensation"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-41",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means careful?",
+    "choices": [
+      "cautious",
+      "careless",
+      "noisy",
+      "empty"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-42",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "Which planet is known as the Red Planet?",
+    "choices": [
+      "Mars",
+      "Venus",
+      "Mercury",
+      "Neptune"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-43",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means brave?",
+    "choices": [
+      "bold",
+      "timid",
+      "sleepy",
+      "hollow"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-44",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What force pulls objects toward Earth?",
+    "choices": [
+      "gravity",
+      "magnetism",
+      "friction",
+      "light"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-45",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means noisy?",
+    "choices": [
+      "loud",
+      "silent",
+      "tiny",
+      "light"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-46",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "Which organ pumps blood?",
+    "choices": [
+      "heart",
+      "lung",
+      "liver",
+      "brain"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-47",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means choose?",
+    "choices": [
+      "select",
+      "forget",
+      "ignore",
+      "scatter"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-48",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What gas do humans need to breathe?",
+    "choices": [
+      "oxygen",
+      "carbon dioxide",
+      "helium",
+      "nitrogen"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-49",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "reading",
+    "prompt": "Which word means honest?",
+    "choices": [
+      "truthful",
+      "sneaky",
+      "lazy",
+      "dull"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g3-mix-50",
+    "gradeMin": 3,
+    "gradeMax": 3,
+    "category": "science",
+    "prompt": "What is the process of water turning into vapor?",
+    "choices": [
+      "evaporation",
+      "freezing",
+      "melting",
+      "condensation"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "extra-g4-math-1",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 6 \u00f7 3?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-2",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 16 \u00f7 4?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-3",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 30 \u00f7 5?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-4",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 12 \u00f7 6?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-5",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 28 \u00f7 7?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-6",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 48 \u00f7 8?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-7",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 18 \u00f7 9?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-8",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 40 \u00f7 10?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-9",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 66 \u00f7 11?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-10",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 24 \u00f7 12?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-11",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 12 \u00f7 3?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-12",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 24 \u00f7 4?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-13",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 10 \u00f7 5?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-14",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 24 \u00f7 6?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-15",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 42 \u00f7 7?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-16",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 16 \u00f7 8?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-17",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 36 \u00f7 9?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-18",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 60 \u00f7 10?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-19",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 22 \u00f7 11?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-20",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 48 \u00f7 12?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-21",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 18 \u00f7 3?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-22",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 8 \u00f7 4?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-23",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 20 \u00f7 5?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-24",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 36 \u00f7 6?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-25",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 14 \u00f7 7?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-26",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 32 \u00f7 8?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-27",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 54 \u00f7 9?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-28",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 20 \u00f7 10?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-29",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 44 \u00f7 11?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-30",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 72 \u00f7 12?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-31",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 6 \u00f7 3?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-32",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 16 \u00f7 4?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-33",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 30 \u00f7 5?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-34",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 12 \u00f7 6?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-35",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 28 \u00f7 7?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-36",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 48 \u00f7 8?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-37",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 18 \u00f7 9?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-38",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 40 \u00f7 10?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-39",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 66 \u00f7 11?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-40",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 24 \u00f7 12?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-41",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 12 \u00f7 3?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-42",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 24 \u00f7 4?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-43",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 10 \u00f7 5?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-44",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 24 \u00f7 6?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-45",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 42 \u00f7 7?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-46",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 16 \u00f7 8?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-47",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 36 \u00f7 9?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-48",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 60 \u00f7 10?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-49",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 22 \u00f7 11?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-math-50",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "math",
+    "prompt": "What is 48 \u00f7 12?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-1",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means vanish?",
+    "choices": [
+      "disappear",
+      "appear",
+      "repeat",
+      "announce"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-2",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which layer of Earth do we live on?",
+    "choices": [
+      "crust",
+      "mantle",
+      "core",
+      "outer core"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-3",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means ancient?",
+    "choices": [
+      "old",
+      "new",
+      "modern",
+      "fresh"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-4",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which simple machine is a ramp?",
+    "choices": [
+      "inclined plane",
+      "lever",
+      "wheel",
+      "pulley"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-5",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means eager?",
+    "choices": [
+      "enthusiastic",
+      "bored",
+      "sleepy",
+      "afraid"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-6",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "What is the center of our solar system?",
+    "choices": [
+      "the Sun",
+      "the Moon",
+      "Mars",
+      "Saturn"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-7",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means simple?",
+    "choices": [
+      "basic",
+      "complex",
+      "confused",
+      "glossy"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-8",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which system controls breathing and heartbeat?",
+    "choices": [
+      "respiratory",
+      "digestive",
+      "skeletal",
+      "circulatory"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-9",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means protect?",
+    "choices": [
+      "guard",
+      "harm",
+      "forget",
+      "release"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-10",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "What do we call animals that eat both plants and meat?",
+    "choices": [
+      "omnivores",
+      "herbivores",
+      "carnivores",
+      "insects"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-11",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means vanish?",
+    "choices": [
+      "disappear",
+      "appear",
+      "repeat",
+      "announce"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-12",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which layer of Earth do we live on?",
+    "choices": [
+      "crust",
+      "mantle",
+      "core",
+      "outer core"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-13",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means ancient?",
+    "choices": [
+      "old",
+      "new",
+      "modern",
+      "fresh"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-14",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which simple machine is a ramp?",
+    "choices": [
+      "inclined plane",
+      "lever",
+      "wheel",
+      "pulley"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-15",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means eager?",
+    "choices": [
+      "enthusiastic",
+      "bored",
+      "sleepy",
+      "afraid"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-16",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "What is the center of our solar system?",
+    "choices": [
+      "the Sun",
+      "the Moon",
+      "Mars",
+      "Saturn"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-17",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means simple?",
+    "choices": [
+      "basic",
+      "complex",
+      "confused",
+      "glossy"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-18",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which system controls breathing and heartbeat?",
+    "choices": [
+      "respiratory",
+      "digestive",
+      "skeletal",
+      "circulatory"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-19",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means protect?",
+    "choices": [
+      "guard",
+      "harm",
+      "forget",
+      "release"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-20",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "What do we call animals that eat both plants and meat?",
+    "choices": [
+      "omnivores",
+      "herbivores",
+      "carnivores",
+      "insects"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-21",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means vanish?",
+    "choices": [
+      "disappear",
+      "appear",
+      "repeat",
+      "announce"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-22",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which layer of Earth do we live on?",
+    "choices": [
+      "crust",
+      "mantle",
+      "core",
+      "outer core"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-23",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means ancient?",
+    "choices": [
+      "old",
+      "new",
+      "modern",
+      "fresh"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-24",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which simple machine is a ramp?",
+    "choices": [
+      "inclined plane",
+      "lever",
+      "wheel",
+      "pulley"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-25",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means eager?",
+    "choices": [
+      "enthusiastic",
+      "bored",
+      "sleepy",
+      "afraid"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-26",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "What is the center of our solar system?",
+    "choices": [
+      "the Sun",
+      "the Moon",
+      "Mars",
+      "Saturn"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-27",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means simple?",
+    "choices": [
+      "basic",
+      "complex",
+      "confused",
+      "glossy"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-28",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which system controls breathing and heartbeat?",
+    "choices": [
+      "respiratory",
+      "digestive",
+      "skeletal",
+      "circulatory"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-29",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means protect?",
+    "choices": [
+      "guard",
+      "harm",
+      "forget",
+      "release"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-30",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "What do we call animals that eat both plants and meat?",
+    "choices": [
+      "omnivores",
+      "herbivores",
+      "carnivores",
+      "insects"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-31",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means vanish?",
+    "choices": [
+      "disappear",
+      "appear",
+      "repeat",
+      "announce"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-32",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which layer of Earth do we live on?",
+    "choices": [
+      "crust",
+      "mantle",
+      "core",
+      "outer core"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-33",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means ancient?",
+    "choices": [
+      "old",
+      "new",
+      "modern",
+      "fresh"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-34",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which simple machine is a ramp?",
+    "choices": [
+      "inclined plane",
+      "lever",
+      "wheel",
+      "pulley"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-35",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means eager?",
+    "choices": [
+      "enthusiastic",
+      "bored",
+      "sleepy",
+      "afraid"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-36",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "What is the center of our solar system?",
+    "choices": [
+      "the Sun",
+      "the Moon",
+      "Mars",
+      "Saturn"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-37",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means simple?",
+    "choices": [
+      "basic",
+      "complex",
+      "confused",
+      "glossy"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-38",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which system controls breathing and heartbeat?",
+    "choices": [
+      "respiratory",
+      "digestive",
+      "skeletal",
+      "circulatory"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-39",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means protect?",
+    "choices": [
+      "guard",
+      "harm",
+      "forget",
+      "release"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-40",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "What do we call animals that eat both plants and meat?",
+    "choices": [
+      "omnivores",
+      "herbivores",
+      "carnivores",
+      "insects"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-41",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means vanish?",
+    "choices": [
+      "disappear",
+      "appear",
+      "repeat",
+      "announce"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-42",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which layer of Earth do we live on?",
+    "choices": [
+      "crust",
+      "mantle",
+      "core",
+      "outer core"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-43",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means ancient?",
+    "choices": [
+      "old",
+      "new",
+      "modern",
+      "fresh"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-44",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which simple machine is a ramp?",
+    "choices": [
+      "inclined plane",
+      "lever",
+      "wheel",
+      "pulley"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-45",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means eager?",
+    "choices": [
+      "enthusiastic",
+      "bored",
+      "sleepy",
+      "afraid"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-46",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "What is the center of our solar system?",
+    "choices": [
+      "the Sun",
+      "the Moon",
+      "Mars",
+      "Saturn"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-47",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means simple?",
+    "choices": [
+      "basic",
+      "complex",
+      "confused",
+      "glossy"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-48",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "Which system controls breathing and heartbeat?",
+    "choices": [
+      "respiratory",
+      "digestive",
+      "skeletal",
+      "circulatory"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-49",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "reading",
+    "prompt": "Which word means protect?",
+    "choices": [
+      "guard",
+      "harm",
+      "forget",
+      "release"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g4-mix-50",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "science",
+    "prompt": "What do we call animals that eat both plants and meat?",
+    "choices": [
+      "omnivores",
+      "herbivores",
+      "carnivores",
+      "insects"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-1",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 12 \u00d7 3?",
+    "choices": [
+      "36",
+      "48",
+      "33",
+      "39"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-2",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 10 \u00f7 5?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-3",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 14 \u00d7 7?",
+    "choices": [
+      "98",
+      "112",
+      "91",
+      "105"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-4",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 9 \u00f7 9?",
+    "choices": [
+      "1",
+      "2",
+      "0",
+      "3"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-5",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 16 \u00d7 11?",
+    "choices": [
+      "176",
+      "192",
+      "165",
+      "187"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-6",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 16 \u00f7 4?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-7",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 18 \u00d7 6?",
+    "choices": [
+      "108",
+      "126",
+      "102",
+      "114"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-8",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 16 \u00f7 8?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-9",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 20 \u00d7 10?",
+    "choices": [
+      "200",
+      "220",
+      "190",
+      "210"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-10",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 21 \u00f7 3?",
+    "choices": [
+      "7",
+      "8",
+      "6",
+      "9"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-11",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 22 \u00d7 5?",
+    "choices": [
+      "110",
+      "132",
+      "105",
+      "115"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-12",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 21 \u00f7 7?",
+    "choices": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-13",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 24 \u00d7 9?",
+    "choices": [
+      "216",
+      "240",
+      "207",
+      "225"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-14",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 22 \u00f7 11?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-15",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 26 \u00d7 4?",
+    "choices": [
+      "104",
+      "130",
+      "100",
+      "108"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-16",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 24 \u00f7 6?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-17",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 28 \u00d7 8?",
+    "choices": [
+      "224",
+      "252",
+      "216",
+      "232"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-18",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 20 \u00f7 10?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-19",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 30 \u00d7 3?",
+    "choices": [
+      "90",
+      "120",
+      "87",
+      "93"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-20",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 30 \u00f7 5?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-21",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 12 \u00d7 7?",
+    "choices": [
+      "84",
+      "96",
+      "77",
+      "91"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-22",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 9 \u00f7 9?",
+    "choices": [
+      "1",
+      "2",
+      "0",
+      "3"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-23",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 14 \u00d7 11?",
+    "choices": [
+      "154",
+      "168",
+      "143",
+      "165"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-24",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 12 \u00f7 4?",
+    "choices": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-25",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 16 \u00d7 6?",
+    "choices": [
+      "96",
+      "112",
+      "90",
+      "102"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-26",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 16 \u00f7 8?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-27",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 18 \u00d7 10?",
+    "choices": [
+      "180",
+      "198",
+      "170",
+      "190"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-28",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 18 \u00f7 3?",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-29",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 20 \u00d7 5?",
+    "choices": [
+      "100",
+      "120",
+      "95",
+      "105"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-30",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 21 \u00f7 7?",
+    "choices": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-31",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 22 \u00d7 9?",
+    "choices": [
+      "198",
+      "220",
+      "189",
+      "207"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-32",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 22 \u00f7 11?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-33",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 24 \u00d7 4?",
+    "choices": [
+      "96",
+      "120",
+      "92",
+      "100"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-34",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 24 \u00f7 6?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-35",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 26 \u00d7 8?",
+    "choices": [
+      "208",
+      "234",
+      "200",
+      "216"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-36",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 20 \u00f7 10?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-37",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 28 \u00d7 3?",
+    "choices": [
+      "84",
+      "112",
+      "81",
+      "87"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-38",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 25 \u00f7 5?",
+    "choices": [
+      "5",
+      "6",
+      "4",
+      "7"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-39",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 30 \u00d7 7?",
+    "choices": [
+      "210",
+      "240",
+      "203",
+      "217"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-40",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 27 \u00f7 9?",
+    "choices": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-41",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 12 \u00d7 11?",
+    "choices": [
+      "132",
+      "144",
+      "121",
+      "143"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-42",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 12 \u00f7 4?",
+    "choices": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-43",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 14 \u00d7 6?",
+    "choices": [
+      "84",
+      "98",
+      "78",
+      "90"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-44",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 8 \u00f7 8?",
+    "choices": [
+      "1",
+      "2",
+      "0",
+      "3"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-45",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 16 \u00d7 10?",
+    "choices": [
+      "160",
+      "176",
+      "150",
+      "170"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-46",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 15 \u00f7 3?",
+    "choices": [
+      "5",
+      "6",
+      "4",
+      "7"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-47",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 18 \u00d7 5?",
+    "choices": [
+      "90",
+      "108",
+      "85",
+      "95"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-48",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 14 \u00f7 7?",
+    "choices": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-49",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 20 \u00d7 9?",
+    "choices": [
+      "180",
+      "200",
+      "171",
+      "189"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-math-50",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "math",
+    "prompt": "What is 11 \u00f7 11?",
+    "choices": [
+      "1",
+      "2",
+      "0",
+      "3"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-1",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means obvious?",
+    "choices": [
+      "clear",
+      "hidden",
+      "dull",
+      "fragile"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-2",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What is the boiling point of water in Celsius?",
+    "choices": [
+      "100",
+      "0",
+      "50",
+      "200"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-3",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means enormous?",
+    "choices": [
+      "massive",
+      "tiny",
+      "thin",
+      "brief"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-4",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "Which planet is the largest in our solar system?",
+    "choices": [
+      "Jupiter",
+      "Earth",
+      "Mars",
+      "Mercury"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-5",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means predict?",
+    "choices": [
+      "forecast",
+      "deny",
+      "wander",
+      "erase"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-6",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What is the main gas in Earth's atmosphere?",
+    "choices": [
+      "nitrogen",
+      "oxygen",
+      "carbon dioxide",
+      "argon"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-7",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means repair?",
+    "choices": [
+      "fix",
+      "break",
+      "ruin",
+      "drop"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-8",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "Which organ filters blood and makes urine?",
+    "choices": [
+      "kidneys",
+      "lungs",
+      "skin",
+      "stomach"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-9",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means conclude?",
+    "choices": [
+      "finish",
+      "start",
+      "copy",
+      "build"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-10",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What do we call molten rock under Earth's surface?",
+    "choices": [
+      "magma",
+      "lava",
+      "sand",
+      "clay"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-11",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means obvious?",
+    "choices": [
+      "clear",
+      "hidden",
+      "dull",
+      "fragile"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-12",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What is the boiling point of water in Celsius?",
+    "choices": [
+      "100",
+      "0",
+      "50",
+      "200"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-13",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means enormous?",
+    "choices": [
+      "massive",
+      "tiny",
+      "thin",
+      "brief"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-14",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "Which planet is the largest in our solar system?",
+    "choices": [
+      "Jupiter",
+      "Earth",
+      "Mars",
+      "Mercury"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-15",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means predict?",
+    "choices": [
+      "forecast",
+      "deny",
+      "wander",
+      "erase"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-16",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What is the main gas in Earth's atmosphere?",
+    "choices": [
+      "nitrogen",
+      "oxygen",
+      "carbon dioxide",
+      "argon"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-17",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means repair?",
+    "choices": [
+      "fix",
+      "break",
+      "ruin",
+      "drop"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-18",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "Which organ filters blood and makes urine?",
+    "choices": [
+      "kidneys",
+      "lungs",
+      "skin",
+      "stomach"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-19",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means conclude?",
+    "choices": [
+      "finish",
+      "start",
+      "copy",
+      "build"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-20",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What do we call molten rock under Earth's surface?",
+    "choices": [
+      "magma",
+      "lava",
+      "sand",
+      "clay"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-21",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means obvious?",
+    "choices": [
+      "clear",
+      "hidden",
+      "dull",
+      "fragile"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-22",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What is the boiling point of water in Celsius?",
+    "choices": [
+      "100",
+      "0",
+      "50",
+      "200"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-23",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means enormous?",
+    "choices": [
+      "massive",
+      "tiny",
+      "thin",
+      "brief"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-24",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "Which planet is the largest in our solar system?",
+    "choices": [
+      "Jupiter",
+      "Earth",
+      "Mars",
+      "Mercury"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-25",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means predict?",
+    "choices": [
+      "forecast",
+      "deny",
+      "wander",
+      "erase"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-26",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What is the main gas in Earth's atmosphere?",
+    "choices": [
+      "nitrogen",
+      "oxygen",
+      "carbon dioxide",
+      "argon"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-27",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means repair?",
+    "choices": [
+      "fix",
+      "break",
+      "ruin",
+      "drop"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-28",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "Which organ filters blood and makes urine?",
+    "choices": [
+      "kidneys",
+      "lungs",
+      "skin",
+      "stomach"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-29",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means conclude?",
+    "choices": [
+      "finish",
+      "start",
+      "copy",
+      "build"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-30",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What do we call molten rock under Earth's surface?",
+    "choices": [
+      "magma",
+      "lava",
+      "sand",
+      "clay"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-31",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means obvious?",
+    "choices": [
+      "clear",
+      "hidden",
+      "dull",
+      "fragile"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-32",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What is the boiling point of water in Celsius?",
+    "choices": [
+      "100",
+      "0",
+      "50",
+      "200"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-33",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means enormous?",
+    "choices": [
+      "massive",
+      "tiny",
+      "thin",
+      "brief"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-34",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "Which planet is the largest in our solar system?",
+    "choices": [
+      "Jupiter",
+      "Earth",
+      "Mars",
+      "Mercury"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-35",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means predict?",
+    "choices": [
+      "forecast",
+      "deny",
+      "wander",
+      "erase"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-36",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What is the main gas in Earth's atmosphere?",
+    "choices": [
+      "nitrogen",
+      "oxygen",
+      "carbon dioxide",
+      "argon"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-37",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means repair?",
+    "choices": [
+      "fix",
+      "break",
+      "ruin",
+      "drop"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-38",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "Which organ filters blood and makes urine?",
+    "choices": [
+      "kidneys",
+      "lungs",
+      "skin",
+      "stomach"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-39",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means conclude?",
+    "choices": [
+      "finish",
+      "start",
+      "copy",
+      "build"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-40",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What do we call molten rock under Earth's surface?",
+    "choices": [
+      "magma",
+      "lava",
+      "sand",
+      "clay"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-41",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means obvious?",
+    "choices": [
+      "clear",
+      "hidden",
+      "dull",
+      "fragile"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-42",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What is the boiling point of water in Celsius?",
+    "choices": [
+      "100",
+      "0",
+      "50",
+      "200"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-43",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means enormous?",
+    "choices": [
+      "massive",
+      "tiny",
+      "thin",
+      "brief"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-44",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "Which planet is the largest in our solar system?",
+    "choices": [
+      "Jupiter",
+      "Earth",
+      "Mars",
+      "Mercury"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-45",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means predict?",
+    "choices": [
+      "forecast",
+      "deny",
+      "wander",
+      "erase"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-46",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What is the main gas in Earth's atmosphere?",
+    "choices": [
+      "nitrogen",
+      "oxygen",
+      "carbon dioxide",
+      "argon"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-47",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means repair?",
+    "choices": [
+      "fix",
+      "break",
+      "ruin",
+      "drop"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-48",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "Which organ filters blood and makes urine?",
+    "choices": [
+      "kidneys",
+      "lungs",
+      "skin",
+      "stomach"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-49",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "reading",
+    "prompt": "Which word means conclude?",
+    "choices": [
+      "finish",
+      "start",
+      "copy",
+      "build"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
+  },
+  {
+    "id": "extra-g5-mix-50",
+    "gradeMin": 5,
+    "gradeMax": 5,
+    "category": "science",
+    "prompt": "What do we call molten rock under Earth's surface?",
+    "choices": [
+      "magma",
+      "lava",
+      "sand",
+      "clay"
+    ],
+    "answerIndex": 0,
+    "difficulty": 3
   }
 ]

@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+.hidden {
+  display: none !important;
+}
+
 body {
   margin: 0;
   background: radial-gradient(circle at top, rgba(18, 22, 32, 0.7), var(--bg));
@@ -187,6 +191,44 @@ input[type="text"] {
   margin: 80px auto 0;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.75);
   border: 1px solid rgba(154, 107, 255, 0.2);
+}
+
+.lore-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(5, 6, 8, 0.92);
+  z-index: 6;
+  padding: 24px;
+}
+
+.lore-overlay.hidden {
+  display: none;
+}
+
+.lore-card {
+  background: rgba(12, 14, 22, 0.95);
+  padding: 24px;
+  border-radius: 18px;
+  max-width: 620px;
+  width: min(90vw, 620px);
+  border: 1px solid rgba(154, 107, 255, 0.35);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.75);
+  text-align: left;
+}
+
+.lore-night {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.lore-subtitle {
+  line-height: 1.6;
+  margin: 12px 0 18px;
+  color: rgba(245, 246, 251, 0.9);
 }
 
 .badge {
