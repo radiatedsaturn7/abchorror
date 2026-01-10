@@ -265,7 +265,12 @@ async function loadQuestions() {
     Object.entries(GRADE_FILES).map(async ([grade, file]) => {
       const response = await fetch(file);
       const data = await response.json();
-      return [parseInt(grade, 10), data];
+      const gradeValue = parseInt(grade, 10);
+      const inGrade = data.filter(
+        (question) => gradeValue >= question.gradeMin && gradeValue <= question.gradeMax
+      );
+      const trimmed = inGrade.length > 500 ? shuffle(inGrade).slice(0, 500) : inGrade;
+      return [gradeValue, trimmed];
     })
   );
   state.questionsByGrade = Object.fromEntries(entries);
@@ -274,11 +279,25 @@ async function loadQuestions() {
 
 function filterQuestions() {
   const difficultyCap = Math.min(3, state.night);
-  return state.questions.filter((q) => {
+  const inGradeQuestions = state.questions.filter((q) => {
     const inGrade = state.grade >= q.gradeMin && state.grade <= q.gradeMax;
-    const inDifficulty = q.difficulty ? q.difficulty <= difficultyCap : true;
-    return inGrade && inDifficulty;
+    return inGrade;
   });
+  const filtered = inGradeQuestions.filter((q) =>
+    q.difficulty ? q.difficulty <= difficultyCap : true
+  );
+  if (!filtered.length) {
+    return inGradeQuestions;
+  }
+  if (filtered.length < 10 && difficultyCap < 3) {
+    const relaxed = inGradeQuestions.filter((q) =>
+      q.difficulty ? q.difficulty <= difficultyCap + 1 : true
+    );
+    if (relaxed.length) {
+      return relaxed;
+    }
+  }
+  return filtered;
 }
 
 function shuffle(array) {
