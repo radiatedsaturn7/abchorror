@@ -77,6 +77,38 @@
     "difficulty": 2
   },
   {
+    "id": "spelling-1",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "spelling",
+    "prompt": "Spell the word.",
+    "spokenPrompt": "Spell train.",
+    "choices": [
+      "train",
+      "trane",
+      "trayne",
+      "trayn"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
+    "id": "spelling-2",
+    "gradeMin": 2,
+    "gradeMax": 2,
+    "category": "spelling",
+    "prompt": "Which word did you hear?",
+    "spokenPrompt": "Which word is night?",
+    "choices": [
+      "night",
+      "nite",
+      "knight",
+      "nigh"
+    ],
+    "answerIndex": 0,
+    "difficulty": 2
+  },
+  {
     "id": "science-1",
     "gradeMin": 2,
     "gradeMax": 2,

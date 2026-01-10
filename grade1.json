@@ -46,6 +46,38 @@
     "difficulty": 1
   },
   {
+    "id": "spelling-1",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "spelling",
+    "prompt": "Spell the word.",
+    "spokenPrompt": "Spell car.",
+    "choices": [
+      "car",
+      "kar",
+      "carr",
+      "cor"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
+    "id": "spelling-2",
+    "gradeMin": 1,
+    "gradeMax": 1,
+    "category": "spelling",
+    "prompt": "Which word did you hear?",
+    "spokenPrompt": "Which word is car?",
+    "choices": [
+      "car",
+      "cat",
+      "cap",
+      "can"
+    ],
+    "answerIndex": 0,
+    "difficulty": 1
+  },
+  {
     "id": "science-1",
     "gradeMin": 1,
     "gradeMax": 1,

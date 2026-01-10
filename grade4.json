@@ -77,6 +77,38 @@
     "difficulty": 4
   },
   {
+    "id": "spelling-1",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "spelling",
+    "prompt": "Spell the word.",
+    "spokenPrompt": "Spell planet.",
+    "choices": [
+      "planet",
+      "planit",
+      "plannet",
+      "plannit"
+    ],
+    "answerIndex": 0,
+    "difficulty": 4
+  },
+  {
+    "id": "spelling-2",
+    "gradeMin": 4,
+    "gradeMax": 4,
+    "category": "spelling",
+    "prompt": "Which word did you hear?",
+    "spokenPrompt": "Which word is collect?",
+    "choices": [
+      "collect",
+      "coleckt",
+      "collet",
+      "collecte"
+    ],
+    "answerIndex": 0,
+    "difficulty": 4
+  },
+  {
     "id": "science-3",
     "gradeMin": 4,
     "gradeMax": 4,

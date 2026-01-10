@@ -4,6 +4,7 @@ const winScreen = document.getElementById("win-screen");
 const jumpscare = document.getElementById("jumpscare");
 
 const gradeButtons = document.querySelectorAll(".grade-options .chip");
+const categoryOptionsEl = document.getElementById("category-options");
 const customNameInput = document.getElementById("custom-name");
 const startButton = document.getElementById("start-btn");
 
@@ -38,6 +39,24 @@ const MODE_LABELS = {
   speed: "Speed Round",
   match: "Match-Up",
 };
+const CATEGORY_LABELS = {
+  math: "Math",
+  reading: "Reading",
+  spelling: "Spelling",
+  science: "Science",
+  "social studies": "Social Studies",
+  language: "Language",
+  general: "General",
+};
+const CATEGORY_ORDER = [
+  "math",
+  "reading",
+  "spelling",
+  "science",
+  "social studies",
+  "language",
+  "general",
+];
 const MAX_NIGHTS = 5;
 const GRADE_FILES = {
   1: "grade1.json",
@@ -89,7 +108,10 @@ const speechSynth = window.speechSynthesis || null;
 
 const selectors = {
   grade: 3,
+  categories: new Set(),
 };
+
+let availableCategories = [];
 
 const loreByGrade = {
   1: [
@@ -261,6 +283,7 @@ async function loadQuestions() {
   // Add new questions by editing grade*.json with the schema:
   // id, gradeMin, gradeMax, category, prompt, choices[], answerIndex,
   // optional passage (reading), hint, difficulty (1-3).
+  // For audio-only prompts, add spokenPrompt to narrate instead of prompt.
   const entries = await Promise.all(
     Object.entries(GRADE_FILES).map(async ([grade, file]) => {
       const response = await fetch(file);
@@ -277,20 +300,78 @@ async function loadQuestions() {
   state.questions = state.questionsByGrade[state.grade] || [];
 }
 
+function getAvailableCategories(questions = null) {
+  const categories = new Set();
+  const source = questions || state.questionsByGrade[selectors.grade] || [];
+  source.forEach((question) => categories.add(question.category));
+  const ordered = CATEGORY_ORDER.filter((category) => categories.has(category));
+  const extras = Array.from(categories)
+    .filter((category) => !CATEGORY_ORDER.includes(category))
+    .sort((a, b) => a.localeCompare(b));
+  return [...ordered, ...extras];
+}
+
+function updateCategoryButtons() {
+  if (!categoryOptionsEl) {
+    return;
+  }
+  categoryOptionsEl.querySelectorAll(".chip").forEach((button) => {
+    button.classList.toggle("active", selectors.categories.has(button.dataset.category));
+  });
+}
+
+function handleCategoryToggle(category) {
+  if (selectors.categories.has(category)) {
+    selectors.categories.delete(category);
+  } else {
+    selectors.categories.add(category);
+  }
+  if (!selectors.categories.size) {
+    availableCategories.forEach((item) => selectors.categories.add(item));
+  }
+  updateCategoryButtons();
+}
+
+function renderCategoryOptions() {
+  if (!categoryOptionsEl) {
+    return;
+  }
+  if (!Object.keys(state.questionsByGrade).length) {
+    return;
+  }
+  availableCategories = getAvailableCategories();
+  selectors.categories = new Set(availableCategories);
+  categoryOptionsEl.innerHTML = "";
+  availableCategories.forEach((category) => {
+    const button = document.createElement("button");
+    button.className = "chip active";
+    button.type = "button";
+    button.dataset.category = category;
+    button.textContent = CATEGORY_LABELS[category] || category;
+    button.addEventListener("click", () => handleCategoryToggle(category));
+    categoryOptionsEl.appendChild(button);
+  });
+}
+
 function filterQuestions() {
   const difficultyCap = Math.min(3, state.night);
   const inGradeQuestions = state.questions.filter((q) => {
     const inGrade = state.grade >= q.gradeMin && state.grade <= q.gradeMax;
     return inGrade;
   });
-  const filtered = inGradeQuestions.filter((q) =>
+  const allowedCategories =
+    state.selectedCategories && state.selectedCategories.length ? state.selectedCategories : null;
+  const categoryFiltered = allowedCategories
+    ? inGradeQuestions.filter((q) => allowedCategories.includes(q.category))
+    : inGradeQuestions;
+  const filtered = categoryFiltered.filter((q) =>
     q.difficulty ? q.difficulty <= difficultyCap : true
   );
   if (!filtered.length) {
-    return inGradeQuestions;
+    return categoryFiltered;
   }
   if (filtered.length < 10 && difficultyCap < 3) {
-    const relaxed = inGradeQuestions.filter((q) =>
+    const relaxed = categoryFiltered.filter((q) =>
       q.difficulty ? q.difficulty <= difficultyCap + 1 : true
     );
     if (relaxed.length) {
@@ -428,7 +509,7 @@ function speakText(text) {
 }
 
 function speakQuestion(question) {
-  speakText(question.prompt);
+  speakText(question.spokenPrompt || question.prompt);
 }
 
 function showFeedback(text, type, hint) {
@@ -658,6 +739,7 @@ function startGame() {
 function setGrade(grade) {
   selectors.grade = grade;
   setActiveButton(gradeButtons, String(selectors.grade), "grade");
+  renderCategoryOptions();
 }
 
 function applySelections() {
@@ -666,6 +748,9 @@ function applySelections() {
   state.playerName = customNameInput.value.trim() || "Player";
   state.night = 1;
   state.questions = state.questionsByGrade[state.grade] || [];
+  state.selectedCategories = selectors.categories.size
+    ? Array.from(selectors.categories)
+    : availableCategories.slice();
 }
 
 function handleKeyboard(e) {
@@ -752,6 +837,7 @@ async function init() {
   startDreadPressure();
   startRandomFlicker();
   await loadQuestions();
+  renderCategoryOptions();
 }
 
 init();
