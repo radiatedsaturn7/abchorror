@@ -56,6 +56,9 @@
     <section id="game-screen" class="screen">
       <div class="overlay vignette"></div>
       <div class="overlay flicker"></div>
+      <div class="overlay static"></div>
+      <div id="power-flicker" class="overlay power-flicker" aria-hidden="true"></div>
+      <img id="flicker-sprite" class="overlay flicker-sprite" src="flicker.png" alt="" aria-hidden="true" />
       <div id="shadow-edge" class="shadow-edge" aria-hidden="true"></div>
 
       <header class="hud">
@@ -97,7 +100,12 @@
     </section>
 
     <div id="jumpscare" class="jumpscare hidden" aria-hidden="true">
-      <img src="assets/scare.png" alt="Spooky silhouette" />
+      <img id="jumpscare-image" src="scare.png" alt="Spooky silhouette" />
+      <div class="jumpscare-message">
+        <h2>You're Out of Time</h2>
+        <p>The office went dark. Want to try again?</p>
+        <button id="retry-btn" class="primary">Retry Night</button>
+      </div>
     </div>
   </main>
 
