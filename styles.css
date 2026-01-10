@@ -77,7 +77,8 @@ body {
 
 .grade-options,
 .name-options,
-.mode-options {
+.mode-options,
+.category-options {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
