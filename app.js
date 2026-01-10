@@ -36,7 +36,7 @@ const MODE_LABELS = {
 const defaultConfig = {
   dreadThreshold: 100,
   wrongDread: 25,
-  dreadDecay: 3,
+  dreadRamp: 0.08,
   resetDread: 40,
   progressPerCorrect: 10,
   speedTimer: 9,
@@ -179,7 +179,7 @@ function configureForNight() {
   const factor = getDifficultyFactor();
   config.dreadThreshold = 100;
   config.wrongDread = Math.round(defaultConfig.wrongDread * factor);
-  config.dreadDecay = Math.max(1, defaultConfig.dreadDecay - (state.night - 1));
+  config.dreadRamp = defaultConfig.dreadRamp * factor;
   config.progressPerCorrect = 10;
 }
 
@@ -431,7 +431,7 @@ function handleKeyboard(e) {
   }
 }
 
-function startDreadDecay() {
+function startDreadPressure() {
   setInterval(() => {
     if (!gameScreen.classList.contains("active")) {
       return;
@@ -439,7 +439,7 @@ function startDreadDecay() {
     if (state.locked) {
       return;
     }
-    state.dread = Math.max(0, state.dread - config.dreadDecay * 0.1);
+    state.dread = Math.min(100, state.dread + config.dreadRamp);
     updateBars();
   }, 100);
 }
@@ -494,7 +494,7 @@ function startListeners() {
 async function init() {
   initSelectors();
   startListeners();
-  startDreadDecay();
+  startDreadPressure();
   startRandomFlicker();
   await loadQuestions();
 }
