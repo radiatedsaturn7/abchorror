@@ -23,6 +23,9 @@ const shadowEdge = document.getElementById("shadow-edge");
 const statsEl = document.getElementById("stats");
 const nextNightBtn = document.getElementById("next-night");
 const backHomeBtn = document.getElementById("back-home");
+const powerFlicker = document.getElementById("power-flicker");
+const retryBtn = document.getElementById("retry-btn");
+const flickerSprite = document.getElementById("flicker-sprite");
 
 const LETTERS = ["A", "B", "C", "D"];
 const MODE_LABELS = {
@@ -60,9 +63,11 @@ const state = {
   questionsAnswered: 0,
   audioUnlocked: false,
   audioContext: null,
+  deskStage: -1,
 };
 
 const config = { ...defaultConfig };
+const deskScenes = ["desk1.png", "desk2.png", "desk3.png"];
 
 const selectors = {
   grade: 3,
@@ -103,6 +108,22 @@ function beep(frequency = 440, duration = 0.15) {
   oscillator.type = "sine";
   oscillator.frequency.value = frequency;
   gain.gain.value = 0.08;
+  oscillator.connect(gain);
+  gain.connect(ctx.destination);
+  oscillator.start();
+  oscillator.stop(ctx.currentTime + duration);
+}
+
+function buzz(duration = 0.25) {
+  if (!state.audioContext) {
+    return;
+  }
+  const ctx = state.audioContext;
+  const oscillator = ctx.createOscillator();
+  const gain = ctx.createGain();
+  oscillator.type = "square";
+  oscillator.frequency.value = 110;
+  gain.gain.value = 0.12;
   oscillator.connect(gain);
   gain.connect(ctx.destination);
   oscillator.start();
@@ -180,6 +201,7 @@ function resetState() {
   state.activeTimer = null;
   state.timerSeconds = 0;
   state.questionsAnswered = 0;
+  state.deskStage = -1;
 }
 
 function showScreen(screen) {
@@ -192,6 +214,7 @@ function updateBars() {
   dreadBar.style.width = `${state.dread}%`;
   gameScreen.classList.toggle("high-dread", state.dread >= 70);
   shadowEdge.classList.toggle("visible", state.dread > 70);
+  updateDeskScene();
 }
 
 function updateHUD() {
@@ -231,6 +254,43 @@ function clearFeedback() {
   feedbackEl.textContent = "";
 }
 
+function getDeskStage(dread) {
+  if (dread >= 70) {
+    return 2;
+  }
+  if (dread >= 35) {
+    return 1;
+  }
+  return 0;
+}
+
+function updateDeskScene() {
+  const nextStage = getDeskStage(state.dread);
+  if (nextStage === state.deskStage) {
+    return;
+  }
+  state.deskStage = nextStage;
+  if (powerFlicker) {
+    powerFlicker.classList.remove("active");
+    void powerFlicker.offsetWidth;
+    powerFlicker.classList.add("active");
+  }
+  if (flickerSprite) {
+    flickerSprite.classList.remove("active");
+    void flickerSprite.offsetWidth;
+    flickerSprite.classList.add("active");
+  }
+  buzz(0.3);
+  setTimeout(() => {
+    gameScreen.style.backgroundImage = `url("${deskScenes[state.deskStage]}")`;
+  }, 220);
+  setTimeout(() => {
+    if (flickerSprite) {
+      flickerSprite.classList.remove("active");
+    }
+  }, 340);
+}
+
 function handleAnswer(index) {
   if (state.locked) {
     return;
@@ -244,12 +304,13 @@ function handleAnswer(index) {
     state.streak += 1;
     state.bestStreak = Math.max(state.bestStreak, state.streak);
     state.progress = Math.min(100, state.progress + config.progressPerCorrect);
+    state.dread = Math.max(0, state.dread - 15);
     showFeedback("Correct!", "correct");
     beep(660, 0.18);
     setTimeout(() => {
       state.locked = false;
       clearFeedback();
-      if (state.mode === \"speed\" && state.questionsAnswered >= 10) {
+      if (state.mode === "speed" && state.questionsAnswered >= 10) {
         endNight();
       } else if (state.progress >= 100) {
         endNight();
@@ -265,10 +326,10 @@ function handleAnswer(index) {
     setTimeout(() => {
       state.locked = false;
       clearFeedback();
-      if (state.mode === \"speed\" && state.questionsAnswered >= 10) {
+      if (state.mode === "speed" && state.questionsAnswered >= 10) {
         endNight();
       } else if (state.dread >= config.dreadThreshold) {
-        triggerJumpscare();
+        triggerDeath();
       } else {
         nextQuestion();
       }
@@ -322,22 +383,16 @@ function nextQuestion() {
   startTimer();
 }
 
-function triggerJumpscare() {
+function triggerDeath() {
   state.locked = true;
   state.scares += 1;
   jumpscare.classList.remove("hidden");
   if (state.audioUnlocked) {
-    const scream = new Audio("assets/scream.mp3");
+    const scream = new Audio("scream.mp3");
+    scream.volume = 1;
     scream.play();
   }
   stopTimer();
-  setTimeout(() => {
-    jumpscare.classList.add("hidden");
-    state.dread = config.resetDread;
-    state.locked = false;
-    updateBars();
-    nextQuestion();
-  }, 2000);
 }
 
 function endNight() {
@@ -351,6 +406,7 @@ function startGame() {
   configureForNight();
   updateHUD();
   updateBars();
+  jumpscare.classList.add("hidden");
   showScreen(gameScreen);
   nextQuestion();
 }
@@ -429,6 +485,12 @@ function startListeners() {
 
   backHomeBtn.addEventListener("click", () => {
     showScreen(startScreen);
+  });
+
+  retryBtn.addEventListener("click", () => {
+    jumpscare.classList.add("hidden");
+    state.locked = false;
+    startGame();
   });
 
   document.addEventListener("click", unlockAudio, { once: true });
