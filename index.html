@@ -68,6 +68,15 @@
         </div>
       </header>
 
+      <div id="lore-overlay" class="lore-overlay hidden" role="dialog" aria-live="polite" aria-label="Night briefing">
+        <div class="lore-card">
+          <span id="lore-night" class="lore-night">Night 1 of 5</span>
+          <h2 id="lore-title">Overnight Orientation</h2>
+          <p id="lore-subtitle" class="lore-subtitle"></p>
+          <button id="lore-continue" class="primary">Begin Night</button>
+        </div>
+      </div>
+
       <div class="question-panel" role="region" aria-live="polite">
         <span id="category" class="badge">Category</span>
         <h2 id="prompt">Question prompt</h2>
@@ -79,7 +88,7 @@
 
     <section id="win-screen" class="screen">
       <div class="card">
-        <h2>You Survived the Night</h2>
+        <h2 id="win-title">You Survived the Night</h2>
         <p id="stats"></p>
         <button id="next-night" class="primary">Next Night</button>
         <button id="back-home" class="ghost">Back to Menu</button>
