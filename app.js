@@ -100,6 +100,7 @@ const state = {
   questionQueue: [],
   loreActive: false,
   loreUtterance: null,
+  lastQuestionKey: null,
 };
 
 const config = { ...defaultConfig };
@@ -390,6 +391,28 @@ function shuffle(array) {
   return copy;
 }
 
+function getQuestionKey(question) {
+  if (question.id !== undefined && question.id !== null) {
+    return String(question.id);
+  }
+  return `${question.category}::${question.prompt}`;
+}
+
+function shuffleQuestionChoices(question) {
+  if (!Array.isArray(question.choices) || question.choices.length < 2) {
+    return question;
+  }
+  const indexed = question.choices.map((choice, index) => ({ choice, index }));
+  const shuffled = shuffle(indexed);
+  const choices = shuffled.map((item) => item.choice);
+  const answerIndex = shuffled.findIndex((item) => item.index === question.answerIndex);
+  return {
+    ...question,
+    choices,
+    answerIndex,
+  };
+}
+
 function pickRandomQuestion(questions) {
   return questions[Math.floor(Math.random() * questions.length)];
 }
@@ -443,6 +466,7 @@ function resetState() {
   state.questionQueue = [];
   state.loreActive = false;
   state.loreUtterance = null;
+  state.lastQuestionKey = null;
 }
 
 function showScreen(screen) {
@@ -645,6 +669,16 @@ function stopTimer() {
 function nextQuestion() {
   if (!state.questionQueue.length) {
     state.questionQueue = shuffle(filterQuestions());
+    if (state.questionQueue.length > 1 && state.lastQuestionKey) {
+      const firstKey = getQuestionKey(state.questionQueue[0]);
+      if (firstKey === state.lastQuestionKey) {
+        const swapIndex = Math.floor(Math.random() * (state.questionQueue.length - 1)) + 1;
+        [state.questionQueue[0], state.questionQueue[swapIndex]] = [
+          state.questionQueue[swapIndex],
+          state.questionQueue[0],
+        ];
+      }
+    }
   }
   const available = state.questionQueue.length ? state.questionQueue : filterQuestions();
   let question = available.shift();
@@ -654,7 +688,9 @@ function nextQuestion() {
   if (state.mode === "match") {
     question = buildMatchQuestion(filterQuestions());
   }
-  renderQuestion(question);
+  const randomizedQuestion = shuffleQuestionChoices(question);
+  state.lastQuestionKey = getQuestionKey(randomizedQuestion);
+  renderQuestion(randomizedQuestion);
   startTimer();
 }
 
