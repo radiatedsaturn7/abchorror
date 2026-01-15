@@ -5,7 +5,9 @@ const jumpscare = document.getElementById("jumpscare");
 
 const gradeButtons = document.querySelectorAll(".grade-options .chip");
 const categoryOptionsEl = document.getElementById("category-options");
-const customNameInput = document.getElementById("custom-name");
+const profileOptionsEl = document.getElementById("profile-options");
+const profileNameInput = document.getElementById("profile-name");
+const createProfileBtn = document.getElementById("create-profile");
 const startButton = document.getElementById("start-btn");
 
 const progressBar = document.getElementById("progress-bar");
@@ -14,10 +16,14 @@ const categoryBadge = document.getElementById("category");
 const promptEl = document.getElementById("prompt");
 const passageEl = document.getElementById("passage");
 const choicesEl = document.getElementById("choices");
+const inputAreaEl = document.getElementById("input-area");
+const keyboardEl = document.getElementById("keyboard");
 const feedbackEl = document.getElementById("feedback");
 const timerEl = document.getElementById("timer");
 const playerNameEl = document.getElementById("player-name");
 const modeLabelEl = document.getElementById("mode-label");
+const rereadBtn = document.getElementById("reread-btn");
+const badgeToast = document.getElementById("badge-toast");
 const shadowEdge = document.getElementById("shadow-edge");
 const statsEl = document.getElementById("stats");
 const winTitleEl = document.getElementById("win-title");
@@ -65,6 +71,9 @@ const GRADE_FILES = {
   4: "grade4.json",
   5: "grade5.json",
 };
+const PROFILE_STORAGE_KEY = "abchorror.profiles";
+const PROGRESS_STORAGE_PREFIX = "abchorror.progress.";
+const RECENT_HISTORY_LIMIT = 10;
 
 const defaultConfig = {
   dreadThreshold: 100,
@@ -81,6 +90,9 @@ const state = {
   grade: 3,
   mode: "night",
   playerName: "Player",
+  profileId: null,
+  profiles: [],
+  progressData: null,
   night: 1,
   progress: 0,
   dread: 0,
@@ -97,10 +109,13 @@ const state = {
   audioUnlocked: false,
   audioContext: null,
   deskStage: -1,
-  questionQueue: [],
   loreActive: false,
   loreUtterance: null,
   lastQuestionKey: null,
+  recentQuestionIds: [],
+  categoryStreaks: {},
+  activeInputEl: null,
+  pendingBadgeTimeout: null,
 };
 
 const config = { ...defaultConfig };
@@ -238,6 +253,137 @@ function initSelectors() {
   setActiveButton(gradeButtons, String(selectors.grade), "grade");
 }
 
+function loadProfiles() {
+  const stored = localStorage.getItem(PROFILE_STORAGE_KEY);
+  try {
+    const parsed = stored ? JSON.parse(stored) : [];
+    state.profiles = Array.isArray(parsed) ? parsed : [];
+  } catch (error) {
+    state.profiles = [];
+  }
+  if (state.profiles.length && !state.profileId) {
+    const recent = [...state.profiles].sort(
+      (a, b) => (b.lastPlayedAt || 0) - (a.lastPlayedAt || 0)
+    )[0];
+    state.profileId = recent.id;
+    state.progressData = loadProgress(recent.id, selectors.grade);
+    state.playerName = recent.name;
+  }
+}
+
+function saveProfiles() {
+  localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(state.profiles));
+}
+
+function getProgressStorageKey(profileId) {
+  return `${PROGRESS_STORAGE_PREFIX}${profileId}`;
+}
+
+function createDefaultProgress(grade) {
+  return {
+    grade,
+    categoryStats: {},
+    questionStats: {},
+    badges: [],
+    unlocks: {},
+  };
+}
+
+function loadProgress(profileId, grade) {
+  if (!profileId) {
+    return createDefaultProgress(grade);
+  }
+  const stored = localStorage.getItem(getProgressStorageKey(profileId));
+  if (!stored) {
+    return createDefaultProgress(grade);
+  }
+  try {
+    const parsed = JSON.parse(stored);
+    return {
+      ...createDefaultProgress(grade),
+      ...parsed,
+      categoryStats: parsed.categoryStats || {},
+      questionStats: parsed.questionStats || {},
+      badges: parsed.badges || [],
+      unlocks: parsed.unlocks || {},
+    };
+  } catch (error) {
+    return createDefaultProgress(grade);
+  }
+}
+
+function saveProgress() {
+  if (!state.profileId || !state.progressData) {
+    return;
+  }
+  localStorage.setItem(
+    getProgressStorageKey(state.profileId),
+    JSON.stringify(state.progressData)
+  );
+}
+
+function updateStartButtonState() {
+  if (!startButton) {
+    return;
+  }
+  startButton.disabled = !state.profileId;
+}
+
+function selectProfile(profileId) {
+  state.profileId = profileId;
+  state.progressData = loadProgress(profileId, selectors.grade);
+  const profile = state.profiles.find((item) => item.id === profileId);
+  state.playerName = profile ? profile.name : "Player";
+  updateStartButtonState();
+  renderProfileOptions();
+}
+
+function renderProfileOptions() {
+  if (!profileOptionsEl) {
+    return;
+  }
+  profileOptionsEl.innerHTML = "";
+  if (!state.profiles.length) {
+    const empty = document.createElement("p");
+    empty.className = "note";
+    empty.textContent = "Create a profile to save progress.";
+    profileOptionsEl.appendChild(empty);
+    return;
+  }
+  state.profiles.forEach((profile) => {
+    const button = document.createElement("button");
+    button.className = "chip";
+    button.type = "button";
+    button.textContent = profile.name;
+    button.dataset.profile = profile.id;
+    if (profile.id === state.profileId) {
+      button.classList.add("active");
+    }
+    button.addEventListener("click", () => selectProfile(profile.id));
+    profileOptionsEl.appendChild(button);
+  });
+}
+
+function handleCreateProfile() {
+  if (!profileNameInput) {
+    return;
+  }
+  const name = profileNameInput.value.trim();
+  if (!name) {
+    return;
+  }
+  const profile = {
+    id: `profile-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+    name,
+    createdAt: Date.now(),
+    lastPlayedAt: Date.now(),
+  };
+  state.profiles.push(profile);
+  saveProfiles();
+  profileNameInput.value = "";
+  selectProfile(profile.id);
+}
+
 function unlockAudio() {
   if (!state.audioContext) {
     state.audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -280,21 +426,141 @@ function buzz(duration = 0.25) {
   oscillator.stop(ctx.currentTime + duration);
 }
 
+function getDefaultNormalize(answerType) {
+  if (answerType === "number") {
+    return { trim: true, caseInsensitive: false, stripPunctuation: true };
+  }
+  return { trim: true, caseInsensitive: true, stripPunctuation: true };
+}
+
+function normalizeInput(value, settings) {
+  let normalized = String(value ?? "");
+  if (settings.trim) {
+    normalized = normalized.trim();
+  }
+  if (settings.stripPunctuation) {
+    normalized = normalized.replace(/[^a-z0-9\s]/gi, "");
+  }
+  if (settings.caseInsensitive) {
+    normalized = normalized.toLowerCase();
+  }
+  return normalized;
+}
+
+function upgradeQuestion(raw, index, gradeValue) {
+  const question = { ...raw };
+  if (question.id === undefined || question.id === null || question.id === "") {
+    question.id = `g${gradeValue}-q${index}`;
+  }
+  if (question.gradeMin === undefined) {
+    question.gradeMin = gradeValue;
+  }
+  if (question.gradeMax === undefined) {
+    question.gradeMax = gradeValue;
+  }
+
+  if (!question.type) {
+    if (question.category === "spelling") {
+      question.type = "spelling";
+    } else if (Array.isArray(question.choices)) {
+      question.type = "mcq";
+    } else if (question.passage) {
+      question.type = "reading";
+    } else {
+      question.type = "input";
+    }
+  }
+
+  if (
+    question.category === "spelling" &&
+    Array.isArray(question.choices) &&
+    question.spokenPrompt
+  ) {
+    question.type = "spelling";
+  }
+
+  if (question.type === "spelling") {
+    question.category = "spelling";
+    question.prompt = "Spell the word you hear.";
+    if (!question.spokenPrompt && typeof question.answer === "string") {
+      question.spokenPrompt = `Spell ${question.answer}.`;
+    }
+    question.answerType = "text";
+    question.normalize = { ...getDefaultNormalize("text"), ...(question.normalize || {}) };
+  }
+
+  if (question.type === "input") {
+    if (!question.answerType) {
+      question.answerType = typeof question.answer === "number" ? "number" : "text";
+    }
+    question.normalize = {
+      ...getDefaultNormalize(question.answerType),
+      ...(question.normalize || {}),
+    };
+  }
+
+  if (question.type === "reading") {
+    if (!Array.isArray(question.choices)) {
+      if (!question.answerType) {
+        question.answerType = typeof question.answer === "number" ? "number" : "text";
+      }
+      question.normalize = {
+        ...getDefaultNormalize(question.answerType),
+        ...(question.normalize || {}),
+      };
+    }
+  }
+
+  return question;
+}
+
+function isValidQuestion(question) {
+  if (!question || !question.prompt || !question.category) {
+    return false;
+  }
+  if (question.type === "mcq") {
+    return (
+      Array.isArray(question.choices) &&
+      question.choices.length === 4 &&
+      question.answerIndex >= 0 &&
+      question.answerIndex < question.choices.length
+    );
+  }
+  if (question.type === "input") {
+    return question.answer !== undefined && question.answerType;
+  }
+  if (question.type === "spelling") {
+    return typeof question.answer === "string" && typeof question.spokenPrompt === "string";
+  }
+  if (question.type === "reading") {
+    if (!question.passage) {
+      return false;
+    }
+    if (Array.isArray(question.choices)) {
+      return (
+        question.choices.length === 4 &&
+        question.answerIndex >= 0 &&
+        question.answerIndex < question.choices.length
+      );
+    }
+    return question.answer !== undefined && question.answerType;
+  }
+  return false;
+}
+
 async function loadQuestions() {
-  // Add new questions by editing grade*.json with the schema:
-  // id, gradeMin, gradeMax, category, prompt, choices[], answerIndex,
-  // optional passage (reading), hint, difficulty (1-3).
-  // For audio-only prompts, add spokenPrompt to narrate instead of prompt.
+  // Schema overview: each question is "mcq", "input", "spelling", or "reading".
+  // See README for full schema and the build tool for validation/generation.
   const entries = await Promise.all(
     Object.entries(GRADE_FILES).map(async ([grade, file]) => {
       const response = await fetch(file);
       const data = await response.json();
       const gradeValue = parseInt(grade, 10);
-      const inGrade = data.filter(
-        (question) => gradeValue >= question.gradeMin && gradeValue <= question.gradeMax
-      );
-      const trimmed = inGrade.length > 500 ? shuffle(inGrade).slice(0, 500) : inGrade;
-      return [gradeValue, trimmed];
+      const upgraded = data
+        .map((question, index) => upgradeQuestion(question, index, gradeValue))
+        .filter((question) => gradeValue >= question.gradeMin && gradeValue <= question.gradeMax)
+        .filter(isValidQuestion);
+      return [gradeValue, upgraded];
     })
   );
   state.questionsByGrade = Object.fromEntries(entries);
@@ -355,7 +621,7 @@ function renderCategoryOptions() {
 }
 
 function filterQuestions() {
-  const difficultyCap = Math.min(3, state.night);
+  const difficultyCap = Math.min(5, state.night + 1);
   const inGradeQuestions = state.questions.filter((q) => {
     const inGrade = state.grade >= q.gradeMin && state.grade <= q.gradeMax;
     return inGrade;
@@ -418,9 +684,13 @@ function pickRandomQuestion(questions) {
 }
 
 function buildMatchQuestion(questions) {
-  const carQuestions = questions.filter((q) => q.category === "cars");
-  const vocabQuestions = questions.filter((q) => q.category === "other");
+  const mcqQuestions = questions.filter((q) => isMcqQuestion(q));
+  const carQuestions = mcqQuestions.filter((q) => q.category === "cars");
+  const vocabQuestions = mcqQuestions.filter((q) => q.category === "other");
   const sourcePool = carQuestions.length > 2 ? carQuestions : vocabQuestions;
+  if (!sourcePool.length) {
+    return pickRandomQuestion(mcqQuestions.length ? mcqQuestions : questions);
+  }
   const base = pickRandomQuestion(sourcePool);
   const choices = shuffle(sourcePool)
     .slice(0, 4)
@@ -463,10 +733,12 @@ function resetState() {
   state.timerSeconds = 0;
   state.questionsAnswered = 0;
   state.deskStage = -1;
-  state.questionQueue = [];
   state.loreActive = false;
   state.loreUtterance = null;
   state.lastQuestionKey = null;
+  state.recentQuestionIds = [];
+  state.categoryStreaks = {};
+  state.activeInputEl = null;
 }
 
 function showScreen(screen) {
@@ -487,17 +759,36 @@ function updateHUD() {
   modeLabelEl.textContent = MODE_LABELS[state.mode];
 }
 
-function renderQuestion(question) {
-  state.activeQuestion = question;
-  categoryBadge.textContent = question.category.toUpperCase();
-  promptEl.textContent = question.prompt;
-  if (question.passage) {
-    passageEl.textContent = question.passage;
-    passageEl.classList.remove("hidden");
-  } else {
-    passageEl.classList.add("hidden");
+function isMcqQuestion(question) {
+  return question.type === "mcq" || (question.type === "reading" && Array.isArray(question.choices));
+}
+
+function isInputQuestion(question) {
+  if (question.type === "reading") {
+    return !Array.isArray(question.choices);
   }
+  return question.type === "input" || question.type === "spelling";
+}
+
+function shouldUseOnScreenKeyboard() {
+  const isTouch =
+    (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) ||
+    "ontouchstart" in window;
+  const isSmall = window.innerWidth < 700;
+  return isTouch && isSmall;
+}
+
+function clearQuestionUI() {
   choicesEl.innerHTML = "";
+  inputAreaEl.innerHTML = "";
+  inputAreaEl.classList.add("hidden");
+  keyboardEl.innerHTML = "";
+  keyboardEl.classList.add("hidden");
+  keyboardEl.setAttribute("aria-hidden", "true");
+  state.activeInputEl = null;
+}
+
+function renderChoices(question) {
   question.choices.forEach((choice, index) => {
     const row = document.createElement("div");
     row.className = "choice-row";
@@ -505,7 +796,7 @@ function renderQuestion(question) {
     button.className = "choice-btn";
     button.dataset.index = index;
     button.innerHTML = `<span class="choice-label">${LETTERS[index]}</span> ${choice}`;
-    button.addEventListener("click", () => handleAnswer(index));
+    button.addEventListener("click", () => handleChoiceAnswer(index));
     const soundButton = document.createElement("button");
     soundButton.className = "choice-sound";
     soundButton.type = "button";
@@ -519,6 +810,122 @@ function renderQuestion(question) {
     row.appendChild(soundButton);
     choicesEl.appendChild(row);
   });
+}
+
+function buildOnScreenKeyboard(targetInput, onSubmit, includeSpace = true) {
+  const rows = [
+    ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
+    ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
+    ["Z", "X", "C", "V", "B", "N", "M"],
+  ];
+  keyboardEl.innerHTML = "";
+  keyboardEl.classList.remove("hidden");
+  keyboardEl.setAttribute("aria-hidden", "false");
+  rows.forEach((row) => {
+    const rowEl = document.createElement("div");
+    rowEl.className = "keyboard-row";
+    row.forEach((letter) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "key-btn";
+      btn.textContent = letter;
+      btn.addEventListener("click", () => {
+        targetInput.value += letter.toLowerCase();
+      });
+      rowEl.appendChild(btn);
+    });
+    keyboardEl.appendChild(rowEl);
+  });
+  const actionRow = document.createElement("div");
+  actionRow.className = "keyboard-row";
+  if (includeSpace) {
+    const spaceBtn = document.createElement("button");
+    spaceBtn.type = "button";
+    spaceBtn.className = "key-btn";
+    spaceBtn.textContent = "Space";
+    spaceBtn.addEventListener("click", () => {
+      targetInput.value += " ";
+    });
+    actionRow.appendChild(spaceBtn);
+  }
+  const backspaceBtn = document.createElement("button");
+  backspaceBtn.type = "button";
+  backspaceBtn.className = "key-btn";
+  backspaceBtn.textContent = "⌫";
+  backspaceBtn.addEventListener("click", () => {
+    targetInput.value = targetInput.value.slice(0, -1);
+  });
+  const submitBtn = document.createElement("button");
+  submitBtn.type = "button";
+  submitBtn.className = "key-btn";
+  submitBtn.textContent = "Enter";
+  submitBtn.addEventListener("click", () => onSubmit(targetInput.value));
+  actionRow.appendChild(backspaceBtn);
+  actionRow.appendChild(submitBtn);
+  keyboardEl.appendChild(actionRow);
+}
+
+function renderInput(question, useKeyboard) {
+  const row = document.createElement("div");
+  row.className = "input-row";
+  const answerType = question.answerType || "text";
+  const useTextarea = answerType === "text" && question.type === "reading";
+  const input = document.createElement(useTextarea ? "textarea" : "input");
+  if (!useTextarea) {
+    input.type = answerType === "number" ? "number" : "text";
+  }
+  input.placeholder = answerType === "number" ? "Type your answer" : "Type your answer";
+  input.autocomplete = "off";
+  input.spellcheck = false;
+  if (useKeyboard) {
+    input.readOnly = true;
+    input.inputMode = "none";
+  } else {
+    input.inputMode = answerType === "number" ? "decimal" : "text";
+  }
+  const submitBtn = document.createElement("button");
+  submitBtn.className = "primary";
+  submitBtn.type = "button";
+  submitBtn.textContent = "Submit";
+  submitBtn.addEventListener("click", () => handleTextAnswer(input.value));
+  input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" && !event.shiftKey) {
+      event.preventDefault();
+      handleTextAnswer(input.value);
+    }
+  });
+  row.appendChild(input);
+  row.appendChild(submitBtn);
+  inputAreaEl.appendChild(row);
+  inputAreaEl.classList.remove("hidden");
+  state.activeInputEl = input;
+
+  if (useKeyboard) {
+    buildOnScreenKeyboard(input, handleTextAnswer, question.type === "spelling");
+  } else {
+    keyboardEl.classList.add("hidden");
+    keyboardEl.setAttribute("aria-hidden", "true");
+  }
+}
+
+function renderQuestion(question) {
+  state.activeQuestion = question;
+  clearFeedback();
+  categoryBadge.textContent = question.category.toUpperCase();
+  promptEl.textContent = question.prompt;
+  if (question.passage) {
+    passageEl.textContent = question.passage;
+    passageEl.classList.remove("hidden");
+  } else {
+    passageEl.classList.add("hidden");
+  }
+  clearQuestionUI();
+  if (isMcqQuestion(question)) {
+    renderChoices(question);
+  } else if (isInputQuestion(question)) {
+    const useKeyboard = question.type === "spelling" && shouldUseOnScreenKeyboard();
+    renderInput(question, useKeyboard);
+  }
   speakQuestion(question);
 }
 
@@ -545,6 +952,143 @@ function showFeedback(text, type, hint) {
 function clearFeedback() {
   feedbackEl.classList.add("hidden");
   feedbackEl.textContent = "";
+}
+
+function getQuestionStat(questionId) {
+  if (!state.progressData) {
+    return null;
+  }
+  if (!state.progressData.questionStats[questionId]) {
+    state.progressData.questionStats[questionId] = {
+      seen: 0,
+      correct: 0,
+      wrong: 0,
+      lastSeen: 0,
+      ease: 2.2,
+      lastResult: null,
+    };
+  }
+  return state.progressData.questionStats[questionId];
+}
+
+function getCategoryStat(category) {
+  if (!state.progressData) {
+    return null;
+  }
+  if (!state.progressData.categoryStats[category]) {
+    state.progressData.categoryStats[category] = {
+      seen: 0,
+      correct: 0,
+      wrong: 0,
+      streakBest: 0,
+      mastery: 0,
+      lastSeen: 0,
+    };
+  }
+  return state.progressData.categoryStats[category];
+}
+
+function normalizeAnswer(question, answer) {
+  const settings = question.normalize || getDefaultNormalize(question.answerType || "text");
+  if (question.answerType === "number") {
+    const normalized = normalizeInput(answer, settings);
+    const parsed = parseFloat(normalized);
+    return Number.isNaN(parsed) ? null : parsed;
+  }
+  return normalizeInput(answer, settings);
+}
+
+function evaluateAnswer(question, userAnswer) {
+  if (isMcqQuestion(question)) {
+    return userAnswer === question.answerIndex;
+  }
+  const normalized = normalizeAnswer(question, userAnswer);
+  if (normalized === null || normalized === "") {
+    return false;
+  }
+  const accepted = Array.isArray(question.answer) ? question.answer : [question.answer];
+  if (question.answerType === "number") {
+    const normalizedAccepted = accepted
+      .map((value) => parseFloat(String(value)))
+      .filter((value) => !Number.isNaN(value));
+    return normalizedAccepted.some((value) => value === normalized);
+  }
+  const acceptedNormalized = accepted.map((value) =>
+    normalizeInput(value, question.normalize || getDefaultNormalize("text"))
+  );
+  return acceptedNormalized.some((value) => value === normalized);
+}
+
+function showBadgeToast(label) {
+  if (!badgeToast) {
+    return;
+  }
+  badgeToast.textContent = `Badge unlocked: ${label}`;
+  badgeToast.classList.remove("hidden");
+  if (state.pendingBadgeTimeout) {
+    clearTimeout(state.pendingBadgeTimeout);
+  }
+  state.pendingBadgeTimeout = setTimeout(() => {
+    badgeToast.classList.add("hidden");
+  }, 3200);
+}
+
+function awardBadge(badgeId, label) {
+  if (!state.progressData || state.progressData.badges.includes(badgeId)) {
+    return;
+  }
+  state.progressData.badges.push(badgeId);
+  showBadgeToast(label);
+  saveProgress();
+}
+
+function updateProgressOnAnswer(question, isCorrect) {
+  if (!state.progressData) {
+    return;
+  }
+  const questionId = getQuestionKey(question);
+  const stat = getQuestionStat(questionId);
+  const categoryStat = getCategoryStat(question.category);
+  const timestamp = Date.now();
+  stat.seen += 1;
+  categoryStat.seen += 1;
+  stat.lastSeen = timestamp;
+  categoryStat.lastSeen = timestamp;
+
+  if (isCorrect) {
+    stat.correct += 1;
+    categoryStat.correct += 1;
+    stat.ease = Math.min(3.2, stat.ease + 0.12);
+    stat.lastResult = "correct";
+  } else {
+    stat.wrong += 1;
+    categoryStat.wrong += 1;
+    stat.ease = Math.max(1.3, stat.ease - 0.2);
+    stat.lastResult = "wrong";
+  }
+
+  const mastery = categoryStat.seen ? categoryStat.correct / categoryStat.seen : 0;
+  categoryStat.mastery = Math.max(0, Math.min(1, mastery));
+  categoryStat.streakBest = Math.max(categoryStat.streakBest, state.streak);
+
+  if (!state.categoryStreaks[question.category]) {
+    state.categoryStreaks[question.category] = 0;
+  }
+  state.categoryStreaks[question.category] = isCorrect
+    ? state.categoryStreaks[question.category] + 1
+    : 0;
+
+  if (question.category === "math" && state.categoryStreaks.math >= 10) {
+    awardBadge("math-streak-10", "Math Streak 10");
+  }
+  if (question.category === "spelling" && state.categoryStreaks.spelling >= 20) {
+    awardBadge("spelling-perfect-20", "Spelling Perfect 20");
+  }
+  if (question.category === "reading" && categoryStat.mastery >= 0.8 && categoryStat.seen >= 20) {
+    awardBadge("reading-mastery-80", "Reading Mastery 80%");
+  }
+
+  saveProgress();
 }
 
 function getDeskStage(dread) {
@@ -584,13 +1128,28 @@ function updateDeskScene() {
   }, 340);
 }
 
-function handleAnswer(index) {
+function handleChoiceAnswer(index) {
   if (state.locked) {
     return;
   }
   state.locked = true;
   state.questionsAnswered += 1;
-  const isCorrect = index === state.activeQuestion.answerIndex;
+  const isCorrect = evaluateAnswer(state.activeQuestion, index);
+  processAnswer(isCorrect);
+}
+
+function handleTextAnswer(text) {
+  if (state.locked) {
+    return;
+  }
+  state.locked = true;
+  state.questionsAnswered += 1;
+  const isCorrect = evaluateAnswer(state.activeQuestion, text);
+  processAnswer(isCorrect);
+}
+
+function processAnswer(isCorrect) {
+  const question = state.activeQuestion;
 
   if (isCorrect) {
     state.correct += 1;
@@ -615,7 +1174,7 @@ function handleAnswer(index) {
     state.wrong += 1;
     state.streak = 0;
     state.dread = Math.min(100, state.dread + config.wrongDread);
-    showFeedback("Not quite", "wrong", state.activeQuestion.hint);
+    showFeedback("Not quite", "wrong", question.hint);
     setTimeout(() => {
       state.locked = false;
       clearFeedback();
@@ -629,6 +1188,7 @@ function handleAnswer(index) {
     }, 900);
   }
 
+  updateProgressOnAnswer(question, isCorrect);
   updateBars();
 }
 
@@ -654,7 +1214,11 @@ function startTimer() {
     if (state.timerSeconds <= 0) {
       clearInterval(state.activeTimer);
       state.activeTimer = null;
-      handleAnswer(-1);
+      if (state.activeQuestion && isMcqQuestion(state.activeQuestion)) {
+        handleChoiceAnswer(-1);
+      } else {
+        handleTextAnswer("");
+      }
     }
   }, 1000);
 }
@@ -666,30 +1230,83 @@ function stopTimer() {
   }
 }
 
-function nextQuestion() {
-  if (!state.questionQueue.length) {
-    state.questionQueue = shuffle(filterQuestions());
-    if (state.questionQueue.length > 1 && state.lastQuestionKey) {
-      const firstKey = getQuestionKey(state.questionQueue[0]);
-      if (firstKey === state.lastQuestionKey) {
-        const swapIndex = Math.floor(Math.random() * (state.questionQueue.length - 1)) + 1;
-        [state.questionQueue[0], state.questionQueue[swapIndex]] = [
-          state.questionQueue[swapIndex],
-          state.questionQueue[0],
-        ];
-      }
+function getQuestionWeight(question) {
+  const questionId = getQuestionKey(question);
+  const stats = state.progressData ? state.progressData.questionStats[questionId] : null;
+  const categoryStats = state.progressData
+    ? state.progressData.categoryStats[question.category]
+    : null;
+  let weight = 1;
+
+  if (!stats) {
+    weight += 3;
+  } else {
+    if (stats.lastResult === "wrong") {
+      weight += 4;
+    }
+    if (stats.seen >= 5 && stats.correct / stats.seen >= 0.8) {
+      weight -= 1;
+    }
+    if (stats.ease && stats.ease < 2) {
+      weight += 1.5;
     }
   }
-  const available = state.questionQueue.length ? state.questionQueue : filterQuestions();
-  let question = available.shift();
+
+  if (categoryStats && categoryStats.mastery < 0.6) {
+    weight += 2;
+  }
+
+  if (state.recentQuestionIds.includes(questionId)) {
+    weight -= 3;
+  }
+
+  if (questionId === state.lastQuestionKey) {
+    weight -= 2;
+  }
+
+  return Math.max(0.2, weight);
+}
+
+function pickWeightedQuestion(candidates) {
+  if (!candidates.length) {
+    return null;
+  }
+  const filtered = candidates.filter(
+    (question) => !state.recentQuestionIds.includes(getQuestionKey(question))
+  );
+  const pool = filtered.length ? filtered : candidates;
+  const weights = pool.map((question) => getQuestionWeight(question));
+  const total = weights.reduce((sum, value) => sum + value, 0);
+  let roll = Math.random() * total;
+  for (let i = 0; i < pool.length; i += 1) {
+    roll -= weights[i];
+    if (roll <= 0) {
+      return pool[i];
+    }
+  }
+  return pool[pool.length - 1];
+}
+
+function recordRecentQuestion(question) {
+  const key = getQuestionKey(question);
+  state.recentQuestionIds.push(key);
+  if (state.recentQuestionIds.length > RECENT_HISTORY_LIMIT) {
+    state.recentQuestionIds.shift();
+  }
+}
+
+function nextQuestion() {
+  const available = filterQuestions();
+  let question = pickWeightedQuestion(available);
   if (!question) {
     return;
   }
   if (state.mode === "match") {
-    question = buildMatchQuestion(filterQuestions());
+    question = buildMatchQuestion(available);
   }
-  const randomizedQuestion = shuffleQuestionChoices(question);
+  const randomizedQuestion = isMcqQuestion(question) ? shuffleQuestionChoices(question) : question;
   state.lastQuestionKey = getQuestionKey(randomizedQuestion);
+  recordRecentQuestion(randomizedQuestion);
   renderQuestion(randomizedQuestion);
   startTimer();
 }
@@ -710,6 +1327,7 @@ function endNight() {
   stopTimer();
   showScreen(winScreen);
   statsEl.innerHTML = `Correct: ${state.correct} <br />Wrong: ${state.wrong} <br />Best streak: ${state.bestStreak} <br />Scares: ${state.scares}`;
+  awardBadge("first-night-survived", "First Night Survived");
   if (state.night >= MAX_NIGHTS) {
     winTitleEl.textContent = "You Survived All Five Nights";
     nextNightBtn.classList.add("hidden");
@@ -766,7 +1384,6 @@ function startGame() {
   updateBars();
   jumpscare.classList.add("hidden");
   showScreen(gameScreen);
-  state.questionQueue = shuffle(filterQuestions());
   showLore().then(() => {
     nextQuestion();
   });
@@ -781,24 +1398,37 @@ function setGrade(grade) {
 function applySelections() {
   state.grade = selectors.grade;
   state.mode = "night";
-  state.playerName = customNameInput.value.trim() || "Player";
+  const activeProfile = state.profiles.find((item) => item.id === state.profileId);
+  state.playerName = activeProfile ? activeProfile.name : "Player";
   state.night = 1;
   state.questions = state.questionsByGrade[state.grade] || [];
   state.selectedCategories = selectors.categories.size
     ? Array.from(selectors.categories)
     : availableCategories.slice();
+  if (state.progressData) {
+    state.progressData.grade = state.grade;
+  }
+  if (activeProfile) {
+    activeProfile.lastPlayedAt = Date.now();
+    saveProfiles();
+  }
 }
 
 function handleKeyboard(e) {
   if (gameScreen.classList.contains("active")) {
     const key = e.key;
-    if (key >= "1" && key <= "4") {
-      handleAnswer(parseInt(key, 10) - 1);
+    if (key === "r" || key === "R") {
+      if (state.activeQuestion) {
+        speakQuestion(state.activeQuestion);
+      }
+      return;
     }
-    if (key === "Enter" && feedbackEl.classList.contains("hidden") === false) {
-      state.locked = false;
-      clearFeedback();
-      nextQuestion();
+    if (isMcqQuestion(state.activeQuestion) && key >= "1" && key <= "4") {
+      handleChoiceAnswer(parseInt(key, 10) - 1);
+      return;
+    }
+    if (key === "Enter" && state.activeInputEl && !state.locked) {
+      handleTextAnswer(state.activeInputEl.value);
     }
   }
 }
@@ -840,9 +1470,32 @@ function startListeners() {
 
   startButton.addEventListener("click", () => {
     unlockAudio();
+    if (!state.profileId) {
+      return;
+    }
     applySelections();
     startGame();
   });
+
+  if (createProfileBtn) {
+    createProfileBtn.addEventListener("click", handleCreateProfile);
+  }
+  if (profileNameInput) {
+    profileNameInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        handleCreateProfile();
+      }
+    });
+  }
+
+  if (rereadBtn) {
+    rereadBtn.addEventListener("click", () => {
+      if (state.activeQuestion) {
+        speakQuestion(state.activeQuestion);
+      }
+    });
+  }
 
   nextNightBtn.addEventListener("click", () => {
     if (state.night >= MAX_NIGHTS) {
@@ -873,6 +1526,9 @@ async function init() {
   startDreadPressure();
   startRandomFlicker();
   await loadQuestions();
+  loadProfiles();
+  renderProfileOptions();
+  updateStartButtonState();
   renderCategoryOptions();
 }
 

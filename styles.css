@@ -78,10 +78,23 @@ body {
 .grade-options,
 .name-options,
 .mode-options,
-.category-options {
+.category-options,
+.profile-options {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.profile-create {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.profile-create .ghost {
+  width: auto;
+  margin-top: 0;
 }
 
 .chip {
@@ -124,6 +137,11 @@ input[type="text"] {
   color: #0b0c14;
   width: 100%;
   margin-top: 12px;
+}
+
+.primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .ghost {
@@ -198,6 +216,19 @@ input[type="text"] {
   border: 1px solid rgba(154, 107, 255, 0.2);
 }
 
+.question-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.question-controls .ghost {
+  width: auto;
+  margin-top: 0;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
 .lore-overlay {
   position: absolute;
   inset: 0;
@@ -264,6 +295,67 @@ input[type="text"] {
   display: grid;
   gap: 10px;
   margin-top: 16px;
+}
+
+.input-area {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.input-row {
+  display: grid;
+  gap: 10px;
+}
+
+.input-row input,
+.input-row textarea {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(154, 107, 255, 0.4);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+}
+
+.input-row textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.input-row .primary {
+  width: auto;
+  justify-self: start;
+}
+
+.keyboard {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.keyboard.hidden {
+  display: none;
+}
+
+.keyboard-row {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(auto-fit, minmax(42px, 1fr));
+}
+
+.key-btn {
+  padding: 10px 6px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid transparent;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.key-btn:focus-visible,
+.key-btn:hover {
+  border-color: var(--accent);
 }
 
 .choice-row {
@@ -448,6 +540,23 @@ input[type="text"] {
 .jumpscare-message p {
   margin: 0 0 12px;
   opacity: 0.85;
+}
+
+.badge-toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 12, 18, 0.92);
+  border: 1px solid rgba(154, 107, 255, 0.45);
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  z-index: 30;
+}
+
+.badge-toast.hidden {
+  display: none;
 }
 
 @keyframes flicker {
