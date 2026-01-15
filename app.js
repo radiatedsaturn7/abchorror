@@ -39,6 +39,12 @@ const loreTitleEl = document.getElementById("lore-title");
 const loreSubtitleEl = document.getElementById("lore-subtitle");
 const loreContinueBtn = document.getElementById("lore-continue");
 
+const QuestionUtils = window.QuestionUtils;
+if (!QuestionUtils) {
+  throw new Error("Question utilities missing. Ensure question-utils.js is loaded.");
+}
+const { evaluateAnswer, getDefaultNormalize } = QuestionUtils;
+
 const LETTERS = ["A", "B", "C", "D"];
 const MODE_LABELS = {
   night: "Night Shift",
@@ -424,27 +430,6 @@ function buzz(duration = 0.25) {
   gain.connect(ctx.destination);
   oscillator.start();
   oscillator.stop(ctx.currentTime + duration);
-}
-
-function getDefaultNormalize(answerType) {
-  if (answerType === "number") {
-    return { trim: true, caseInsensitive: false, stripPunctuation: true };
-  }
-  return { trim: true, caseInsensitive: true, stripPunctuation: true };
-}
-
-function normalizeInput(value, settings) {
-  let normalized = String(value ?? "");
-  if (settings.trim) {
-    normalized = normalized.trim();
-  }
-  if (settings.stripPunctuation) {
-    normalized = normalized.replace(/[^a-z0-9\s]/gi, "");
-  }
-  if (settings.caseInsensitive) {
-    normalized = normalized.toLowerCase();
-  }
-  return normalized;
 }
 
 function upgradeQuestion(raw, index, gradeValue) {
@@ -986,37 +971,6 @@ function getCategoryStat(category) {
     };
   }
   return state.progressData.categoryStats[category];
-}
-
-function normalizeAnswer(question, answer) {
-  const settings = question.normalize || getDefaultNormalize(question.answerType || "text");
-  if (question.answerType === "number") {
-    const normalized = normalizeInput(answer, settings);
-    const parsed = parseFloat(normalized);
-    return Number.isNaN(parsed) ? null : parsed;
-  }
-  return normalizeInput(answer, settings);
-}
-
-function evaluateAnswer(question, userAnswer) {
-  if (isMcqQuestion(question)) {
-    return userAnswer === question.answerIndex;
-  }
-  const normalized = normalizeAnswer(question, userAnswer);
-  if (normalized === null || normalized === "") {
-    return false;
-  }
-  const accepted = Array.isArray(question.answer) ? question.answer : [question.answer];
-  if (question.answerType === "number") {
-    const normalizedAccepted = accepted
-      .map((value) => parseFloat(String(value)))
-      .filter((value) => !Number.isNaN(value));
-    return normalizedAccepted.some((value) => value === normalized);
-  }
-  const acceptedNormalized = accepted.map((value) =>
-    normalizeInput(value, question.normalize || getDefaultNormalize("text"))
-  );
-  return acceptedNormalized.some((value) => value === normalized);
 }
 
 function showBadgeToast(label) {
