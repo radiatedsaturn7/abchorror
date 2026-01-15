@@ -35,12 +35,16 @@
         </div>
 
         <div class="field-group">
-          <label>Player name</label>
-          <input id="custom-name" type="text" placeholder="Type your name" />
+          <label>Choose a profile</label>
+          <div id="profile-options" class="profile-options" role="radiogroup" aria-label="Profile selection"></div>
+          <div class="profile-create">
+            <input id="profile-name" type="text" placeholder="New profile name" />
+            <button id="create-profile" class="ghost" type="button">Add Profile</button>
+          </div>
         </div>
 
         <button id="start-btn" class="primary">Start Night</button>
-        <p class="note">Tip: Use keys 1–4 to answer. Press Enter to continue.</p>
+        <p class="note">Tip: Use keys 1–4 for multiple choice. Press R to re-read.</p>
       </div>
     </section>
 
@@ -84,9 +88,14 @@
 
       <div class="question-panel" role="region" aria-live="polite">
         <span id="category" class="badge">Category</span>
+        <div class="question-controls">
+          <button id="reread-btn" class="ghost" type="button">🔁 Re-read</button>
+        </div>
         <h2 id="prompt">Question prompt</h2>
         <p id="passage" class="passage hidden"></p>
         <div id="choices" class="choices"></div>
+        <div id="input-area" class="input-area hidden"></div>
+        <div id="keyboard" class="keyboard hidden" aria-hidden="true"></div>
         <div id="feedback" class="feedback hidden"></div>
       </div>
     </section>
@@ -108,6 +117,8 @@
         <button id="retry-btn" class="primary">Retry Night</button>
       </div>
     </div>
+
+    <div id="badge-toast" class="badge-toast hidden" role="status" aria-live="polite"></div>
   </main>
 
   <script src="app.js"></script>
